@@ -1,8 +1,8 @@
 """
-copilot-ml-tool-selector
-ML-based tool selection for GitHub Copilot / MCP-style tools.
+copilot-ml-tool-selector v2.0
+Production ML-based tool selection.
 
 Primary API:
-    from src.predict import select_tools
+    from src.inference.predict import select_tools
     result = select_tools("Find all functions calling authenticate_user()")
 """

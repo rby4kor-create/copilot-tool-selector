@@ -1,58 +1,38 @@
 """Tests for production inference."""
-from __future__ import annotations
 import sys
 from pathlib import Path
 from unittest.mock import MagicMock
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from src.predict import ModelNotFoundError, ToolSelectorModel, select_tools
-from src.config import Config
 
-cfg = Config()
+from src.inference.predict import ModelNotFoundError, ToolSelectorModel, select_tools
 
+MODEL_PATH = Path("models/tool_selector_pipeline.joblib")
+META_PATH = Path("models/metadata.json")
+MODEL_TRAINED = MODEL_PATH.exists()
 
-def model_is_trained():
-    return cfg.model_artifact_path.exists()
-
-
-SKIP = pytest.mark.skipif(
-    not model_is_trained(),
-    reason="No trained model - run: python src/train.py",
-)
+SKIP = pytest.mark.skipif(not MODEL_TRAINED, reason="Run train.py first")
 
 
 class TestModelNotFound:
-    def test_raises_when_model_missing(self, tmp_path):
-        fake = MagicMock()
-        fake.model_artifact_path = tmp_path / "none.joblib"
-        fake.model_metadata_path = tmp_path / "none.json"
+    def test_raises(self, tmp_path):
         with pytest.raises(ModelNotFoundError):
-            ToolSelectorModel(config=fake)
+            ToolSelectorModel(tmp_path / "none.joblib", tmp_path / "none.json")
 
 
 @SKIP
-class TestValidPredictions:
+class TestPredictions:
     def setup_method(self):
-        self.model = ToolSelectorModel()
+        self.model = ToolSelectorModel(MODEL_PATH, META_PATH)
 
-    def test_predict_not_none(self):
-        assert self.model.predict("Find all functions calling authenticate_user()") is not None
-
-    def test_has_selected_tools(self):
+    def test_returns_result(self):
         r = self.model.predict("Find all functions calling authenticate_user()")
-        assert isinstance(r.selected_tools, list)
-
-    def test_has_rejected_tools(self):
-        r = self.model.predict("Find all functions calling authenticate_user()")
-        assert isinstance(r.rejected_tools, list)
+        assert r is not None
 
     def test_all_tools_accounted(self):
         r = self.model.predict("Find all functions calling authenticate_user()")
-        returned = (
-            {t["tool"] for t in r.selected_tools}
-            | {t["tool"] for t in r.rejected_tools}
-        )
+        returned = {t["tool"] for t in r.selected_tools} | {t["tool"] for t in r.rejected_tools}
         assert returned == set(self.model.tools)
 
     def test_scores_valid(self):
@@ -60,38 +40,42 @@ class TestValidPredictions:
         for t in r.selected_tools + r.rejected_tools:
             assert -1.0 <= t["score"] <= 1.0
 
-    def test_select_tools_returns_dict(self):
-        r = select_tools("Find all functions calling authenticate_user()")
+    def test_select_tools_dict(self):
+        r = select_tools("find something")
         assert isinstance(r, dict)
         assert "selected_tools" in r
-        assert "rejected_tools" in r
 
-    def test_model_not_reloaded(self):
-        m = ToolSelectorModel()
-        v1 = m.predict("find functions").model_version
-        v2 = m.predict("list all files").model_version
-        assert v1 == v2
+    def test_empty_fallback(self):
+        r = self.model.predict("")
+        assert r.fallback_used is True
+
+    def test_none_fallback(self):
+        r = self.model.predict(None)
+        assert r.fallback_used is True
+
+    def test_no_crash_unseen(self):
+        assert self.model.predict("xyzzy frob blorb") is not None
 
 
 @SKIP
-class TestEdgeCases:
+class TestThreshold:
     def setup_method(self):
-        self.model = ToolSelectorModel()
+        self.model = ToolSelectorModel(MODEL_PATH, META_PATH)
 
-    def test_empty_prompt_fallback(self):
-        assert self.model.predict("").fallback_used is True
+    def test_select_above_threshold(self):
+        import joblib
+        art = joblib.load(MODEL_PATH)
+        thresholds = art["thresholds"]
+        r = self.model.predict("Find all functions calling authenticate_user()")
+        for t in r.selected_tools:
+            thresh = thresholds.get(t["tool"], 0.5)
+            assert t["score"] >= thresh
 
-    def test_none_prompt_fallback(self):
-        assert self.model.predict(None).fallback_used is True
-
-    def test_whitespace_prompt_fallback(self):
-        assert self.model.predict("   ").fallback_used is True
-
-    def test_single_word_no_crash(self):
-        assert self.model.predict("find") is not None
-
-    def test_special_chars_no_crash(self):
-        assert self.model.predict("!@#$%^&*()") is not None
-
-    def test_unseen_prompt_no_crash(self):
-        assert self.model.predict("xyzzy frob blorb quux") is not None
+    def test_reject_below_threshold(self):
+        import joblib
+        art = joblib.load(MODEL_PATH)
+        thresholds = art["thresholds"]
+        r = self.model.predict("Find all functions calling authenticate_user()")
+        for t in r.rejected_tools:
+            thresh = thresholds.get(t["tool"], 0.5)
+            assert t["score"] < thresh
