@@ -1,0 +1,108 @@
+{
+  "run_id": "5e5526f2",
+  "model_version": "1.0.0",
+  "training_source": "synthetic",
+  "tools": [
+    "grep_search",
+    "codebase_search",
+    "read_file",
+    "list_dir",
+    "run_terminal_cmd",
+    "edit_file",
+    "web_search"
+  ],
+  "thresholds": {
+    "grep_search": 0.5,
+    "codebase_search": 0.5,
+    "read_file": 0.5,
+    "list_dir": 0.5,
+    "run_terminal_cmd": 0.5,
+    "edit_file": 0.5,
+    "web_search": 0.5
+  },
+  "train_size": 84,
+  "val_size": 13,
+  "test_size": 25,
+  "training_timestamp": "2026-08-20T10:16:30.111838+00:00",
+  "training_duration_seconds": 0.57,
+  "evaluation_metrics": {
+    "micro_f1": 0.6667,
+    "macro_f1": 0.6841,
+    "exact_match_accuracy": 0.36,
+    "tool_selection_accuracy": 0.5686,
+    "tool_rejection_accuracy": 0.9435,
+    "per_tool": {
+      "grep_search": {
+        "threshold": 0.15,
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6667,
+        "tp": 6,
+        "fp": 6,
+        "tn": 13,
+        "fn": 0
+      },
+      "codebase_search": {
+        "threshold": 0.75,
+        "precision": 0.7143,
+        "recall": 0.625,
+        "f1": 0.6667,
+        "tp": 5,
+        "fp": 2,
+        "tn": 15,
+        "fn": 3
+      },
+      "read_file": {
+        "threshold": 0.6,
+        "precision": 1.0,
+        "recall": 0.6667,
+        "f1": 0.8,
+        "tp": 4,
+        "fp": 0,
+        "tn": 19,
+        "fn": 2
+      },
+      "list_dir": {
+        "threshold": 0.5,
+        "precision": 1.0,
+        "recall": 0.75,
+        "f1": 0.8571,
+        "tp": 3,
+        "fp": 0,
+        "tn": 21,
+        "fn": 1
+      },
+      "run_terminal_cmd": {
+        "threshold": 0.1,
+        "precision": 0.2308,
+        "recall": 1.0,
+        "f1": 0.375,
+        "tp": 3,
+        "fp": 10,
+        "tn": 12,
+        "fn": 0
+      },
+      "edit_file": {
+        "threshold": 0.2,
+        "precision": 1.0,
+        "recall": 0.8571,
+        "f1": 0.9231,
+        "tp": 6,
+        "fp": 0,
+        "tn": 18,
+        "fn": 1
+      },
+      "web_search": {
+        "threshold": 0.2,
+        "precision": 0.3333,
+        "recall": 1.0,
+        "f1": 0.5,
+        "tp": 2,
+        "fp": 4,
+        "tn": 19,
+        "fn": 0
+      }
+    }
+  },
+  "threshold_override": "manually set to 0.50 after retraining with expanded dataset"
+}

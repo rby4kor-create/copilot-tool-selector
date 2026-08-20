@@ -1,0 +1,772 @@
+[
+  {
+    "prompt": "Find all functions that call authenticate_user()",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Search for all usages of login() in the codebase",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all occurrences of TODO comments",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Locate the definition of UserService class",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find code similar to this authentication logic",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Search for all imports of pandas library",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find all methods that return None",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "What files are in the src directory?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "List all files in the project root",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show me the directory structure",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "What is in the config folder?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show all folders in data/",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Read the contents of README.md",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Show me what is in config.yaml",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Open the requirements.txt file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Display the contents of src/train.py",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "View the main configuration file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Run the test suite",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Execute the build script",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Install the dependencies",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run python train.py",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Execute all unit tests with pytest",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Deploy the application",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Edit the configuration file",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Create a new Python file called helper.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Modify the train.py to add logging",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Fix the bug in predict.py",
+    "relevant_tools": [
+      "edit_file",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Refactor the UserService class",
+    "relevant_tools": [
+      "edit_file",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Update the README with new instructions",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Add a new function to utils.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "How do I use the requests library?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What is the best way to handle exceptions in Python?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Find documentation for scikit-learn LogisticRegression",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How to install numpy on Windows?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What are best practices for REST API design?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Find all callers of process_payment() and run the payment tests",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Refactor the database module and run tests after",
+    "relevant_tools": [
+      "edit_file",
+      "codebase_search",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Find the UserModel definition and show me the file",
+    "relevant_tools": [
+      "codebase_search",
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "List all test files and run them",
+    "relevant_tools": [
+      "list_dir",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Search for deprecated functions and fix them",
+    "relevant_tools": [
+      "grep_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find similar authentication code and refactor it",
+    "relevant_tools": [
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Read the error log and search for the exception",
+    "relevant_tools": [
+      "read_file",
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Show me the src folder then read main.py",
+    "relevant_tools": [
+      "list_dir",
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Find all test functions that use mock objects",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Create a new config file and update the imports",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Search the web for how to use pandas groupby",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Find the implementation of sort_users and optimize it",
+    "relevant_tools": [
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "List the models directory",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Run the linter on the entire project",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Find all classes that inherit from BaseModel",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all occurrences of the word password in the codebase",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Search for all print statements in the project",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find all files containing the word deprecated",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Locate all uses of os.path.join",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find all lines that import numpy",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Search for the string connection_string in all files",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find the implementation of the payment processor",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Where is the database connection initialized?",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find the class that handles user authentication",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Locate the function that sends emails",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find the method responsible for token validation",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Where is the logging configuration set up?",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all functions that call send_email()",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all callers of validate_token() function",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Search for all usages of the UserRepository class",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all places where DatabaseError is caught",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Locate all calls to the render_template function",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Show me the content of the .env file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "What does the Dockerfile contain?",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Display the contents of setup.py",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Open the pyproject.toml file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Read the contents of the main.py file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Show me what is inside the constants.py file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "View the migration script",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "What files exist in the tests folder?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show me the contents of the models directory",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "List all Python files in the project",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "What is in the scripts folder?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show me the project structure",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "List the files in the data directory",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "What folders are in the root directory?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Run the database migrations",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Execute the setup script",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run pytest with coverage",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Start the development server",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run the formatter on all Python files",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Execute the deployment pipeline",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run mypy type checking",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Install all project dependencies",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Create a new file called constants.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Add error handling to the login function",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Update the version number in setup.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Write a new test for the payment module",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Delete the old migration file",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Rename the config file to settings.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Add a docstring to the UserService class",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "What is the difference between OAuth and JWT?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How do I configure CORS in Flask?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Find the documentation for the boto3 library",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What are the best practices for Python logging?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How to deploy a FastAPI application to AWS?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What is the latest version of scikit-learn?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How do I use async await in Python?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Find the send_notification function and update it",
+    "relevant_tools": [
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Search for all TODO comments and fix them",
+    "relevant_tools": [
+      "grep_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find the test files and run them",
+    "relevant_tools": [
+      "list_dir",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Read the error log and find the exception location",
+    "relevant_tools": [
+      "read_file",
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find the database models and add a new field",
+    "relevant_tools": [
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Search for all API endpoints and document them",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find the auth middleware and run the auth tests",
+    "relevant_tools": [
+      "codebase_search",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "List all config files and read the main one",
+    "relevant_tools": [
+      "list_dir",
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Find all functions that use deprecated methods and update them",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Create a new utility module and run the tests to verify",
+    "relevant_tools": [
+      "edit_file",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Search for slow database queries and optimize them",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find the UserController class definition",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "What functions are defined in utils.py?",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Find all exception handlers in the codebase",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Create a Docker compose file for the project",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "How to use Redis for caching in Python?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Run the security audit on the project",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "List all directories in the src folder",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show me the requirements.txt file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  }
+]

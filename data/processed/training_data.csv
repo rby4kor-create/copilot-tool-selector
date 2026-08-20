@@ -1,0 +1,855 @@
+prompt,tool,label
+Find all functions that call authenticate_user(),grep_search,1
+Find all functions that call authenticate_user(),codebase_search,1
+Find all functions that call authenticate_user(),read_file,0
+Find all functions that call authenticate_user(),list_dir,0
+Find all functions that call authenticate_user(),run_terminal_cmd,0
+Find all functions that call authenticate_user(),edit_file,0
+Find all functions that call authenticate_user(),web_search,0
+Search for all usages of login() in the codebase,grep_search,1
+Search for all usages of login() in the codebase,codebase_search,1
+Search for all usages of login() in the codebase,read_file,0
+Search for all usages of login() in the codebase,list_dir,0
+Search for all usages of login() in the codebase,run_terminal_cmd,0
+Search for all usages of login() in the codebase,edit_file,0
+Search for all usages of login() in the codebase,web_search,0
+Find all occurrences of TODO comments,grep_search,1
+Find all occurrences of TODO comments,codebase_search,0
+Find all occurrences of TODO comments,read_file,0
+Find all occurrences of TODO comments,list_dir,0
+Find all occurrences of TODO comments,run_terminal_cmd,0
+Find all occurrences of TODO comments,edit_file,0
+Find all occurrences of TODO comments,web_search,0
+Locate the definition of UserService class,grep_search,0
+Locate the definition of UserService class,codebase_search,1
+Locate the definition of UserService class,read_file,0
+Locate the definition of UserService class,list_dir,0
+Locate the definition of UserService class,run_terminal_cmd,0
+Locate the definition of UserService class,edit_file,0
+Locate the definition of UserService class,web_search,0
+Find code similar to this authentication logic,grep_search,0
+Find code similar to this authentication logic,codebase_search,1
+Find code similar to this authentication logic,read_file,0
+Find code similar to this authentication logic,list_dir,0
+Find code similar to this authentication logic,run_terminal_cmd,0
+Find code similar to this authentication logic,edit_file,0
+Find code similar to this authentication logic,web_search,0
+Search for all imports of pandas library,grep_search,1
+Search for all imports of pandas library,codebase_search,0
+Search for all imports of pandas library,read_file,0
+Search for all imports of pandas library,list_dir,0
+Search for all imports of pandas library,run_terminal_cmd,0
+Search for all imports of pandas library,edit_file,0
+Search for all imports of pandas library,web_search,0
+Find all methods that return None,grep_search,1
+Find all methods that return None,codebase_search,1
+Find all methods that return None,read_file,0
+Find all methods that return None,list_dir,0
+Find all methods that return None,run_terminal_cmd,0
+Find all methods that return None,edit_file,0
+Find all methods that return None,web_search,0
+What files are in the src directory?,grep_search,0
+What files are in the src directory?,codebase_search,0
+What files are in the src directory?,read_file,0
+What files are in the src directory?,list_dir,1
+What files are in the src directory?,run_terminal_cmd,0
+What files are in the src directory?,edit_file,0
+What files are in the src directory?,web_search,0
+List all files in the project root,grep_search,0
+List all files in the project root,codebase_search,0
+List all files in the project root,read_file,0
+List all files in the project root,list_dir,1
+List all files in the project root,run_terminal_cmd,0
+List all files in the project root,edit_file,0
+List all files in the project root,web_search,0
+Show me the directory structure,grep_search,0
+Show me the directory structure,codebase_search,0
+Show me the directory structure,read_file,0
+Show me the directory structure,list_dir,1
+Show me the directory structure,run_terminal_cmd,0
+Show me the directory structure,edit_file,0
+Show me the directory structure,web_search,0
+What is in the config folder?,grep_search,0
+What is in the config folder?,codebase_search,0
+What is in the config folder?,read_file,0
+What is in the config folder?,list_dir,1
+What is in the config folder?,run_terminal_cmd,0
+What is in the config folder?,edit_file,0
+What is in the config folder?,web_search,0
+Show all folders in data/,grep_search,0
+Show all folders in data/,codebase_search,0
+Show all folders in data/,read_file,0
+Show all folders in data/,list_dir,1
+Show all folders in data/,run_terminal_cmd,0
+Show all folders in data/,edit_file,0
+Show all folders in data/,web_search,0
+Read the contents of README.md,grep_search,0
+Read the contents of README.md,codebase_search,0
+Read the contents of README.md,read_file,1
+Read the contents of README.md,list_dir,0
+Read the contents of README.md,run_terminal_cmd,0
+Read the contents of README.md,edit_file,0
+Read the contents of README.md,web_search,0
+Show me what is in config.yaml,grep_search,0
+Show me what is in config.yaml,codebase_search,0
+Show me what is in config.yaml,read_file,1
+Show me what is in config.yaml,list_dir,0
+Show me what is in config.yaml,run_terminal_cmd,0
+Show me what is in config.yaml,edit_file,0
+Show me what is in config.yaml,web_search,0
+Open the requirements.txt file,grep_search,0
+Open the requirements.txt file,codebase_search,0
+Open the requirements.txt file,read_file,1
+Open the requirements.txt file,list_dir,0
+Open the requirements.txt file,run_terminal_cmd,0
+Open the requirements.txt file,edit_file,0
+Open the requirements.txt file,web_search,0
+Display the contents of src/train.py,grep_search,0
+Display the contents of src/train.py,codebase_search,0
+Display the contents of src/train.py,read_file,1
+Display the contents of src/train.py,list_dir,0
+Display the contents of src/train.py,run_terminal_cmd,0
+Display the contents of src/train.py,edit_file,0
+Display the contents of src/train.py,web_search,0
+View the main configuration file,grep_search,0
+View the main configuration file,codebase_search,0
+View the main configuration file,read_file,1
+View the main configuration file,list_dir,0
+View the main configuration file,run_terminal_cmd,0
+View the main configuration file,edit_file,0
+View the main configuration file,web_search,0
+Run the test suite,grep_search,0
+Run the test suite,codebase_search,0
+Run the test suite,read_file,0
+Run the test suite,list_dir,0
+Run the test suite,run_terminal_cmd,1
+Run the test suite,edit_file,0
+Run the test suite,web_search,0
+Execute the build script,grep_search,0
+Execute the build script,codebase_search,0
+Execute the build script,read_file,0
+Execute the build script,list_dir,0
+Execute the build script,run_terminal_cmd,1
+Execute the build script,edit_file,0
+Execute the build script,web_search,0
+Install the dependencies,grep_search,0
+Install the dependencies,codebase_search,0
+Install the dependencies,read_file,0
+Install the dependencies,list_dir,0
+Install the dependencies,run_terminal_cmd,1
+Install the dependencies,edit_file,0
+Install the dependencies,web_search,0
+Run python train.py,grep_search,0
+Run python train.py,codebase_search,0
+Run python train.py,read_file,0
+Run python train.py,list_dir,0
+Run python train.py,run_terminal_cmd,1
+Run python train.py,edit_file,0
+Run python train.py,web_search,0
+Execute all unit tests with pytest,grep_search,0
+Execute all unit tests with pytest,codebase_search,0
+Execute all unit tests with pytest,read_file,0
+Execute all unit tests with pytest,list_dir,0
+Execute all unit tests with pytest,run_terminal_cmd,1
+Execute all unit tests with pytest,edit_file,0
+Execute all unit tests with pytest,web_search,0
+Deploy the application,grep_search,0
+Deploy the application,codebase_search,0
+Deploy the application,read_file,0
+Deploy the application,list_dir,0
+Deploy the application,run_terminal_cmd,1
+Deploy the application,edit_file,0
+Deploy the application,web_search,0
+Edit the configuration file,grep_search,0
+Edit the configuration file,codebase_search,0
+Edit the configuration file,read_file,0
+Edit the configuration file,list_dir,0
+Edit the configuration file,run_terminal_cmd,0
+Edit the configuration file,edit_file,1
+Edit the configuration file,web_search,0
+Create a new Python file called helper.py,grep_search,0
+Create a new Python file called helper.py,codebase_search,0
+Create a new Python file called helper.py,read_file,0
+Create a new Python file called helper.py,list_dir,0
+Create a new Python file called helper.py,run_terminal_cmd,0
+Create a new Python file called helper.py,edit_file,1
+Create a new Python file called helper.py,web_search,0
+Modify the train.py to add logging,grep_search,0
+Modify the train.py to add logging,codebase_search,0
+Modify the train.py to add logging,read_file,0
+Modify the train.py to add logging,list_dir,0
+Modify the train.py to add logging,run_terminal_cmd,0
+Modify the train.py to add logging,edit_file,1
+Modify the train.py to add logging,web_search,0
+Fix the bug in predict.py,grep_search,0
+Fix the bug in predict.py,codebase_search,1
+Fix the bug in predict.py,read_file,0
+Fix the bug in predict.py,list_dir,0
+Fix the bug in predict.py,run_terminal_cmd,0
+Fix the bug in predict.py,edit_file,1
+Fix the bug in predict.py,web_search,0
+Refactor the UserService class,grep_search,0
+Refactor the UserService class,codebase_search,1
+Refactor the UserService class,read_file,0
+Refactor the UserService class,list_dir,0
+Refactor the UserService class,run_terminal_cmd,0
+Refactor the UserService class,edit_file,1
+Refactor the UserService class,web_search,0
+Update the README with new instructions,grep_search,0
+Update the README with new instructions,codebase_search,0
+Update the README with new instructions,read_file,0
+Update the README with new instructions,list_dir,0
+Update the README with new instructions,run_terminal_cmd,0
+Update the README with new instructions,edit_file,1
+Update the README with new instructions,web_search,0
+Add a new function to utils.py,grep_search,0
+Add a new function to utils.py,codebase_search,0
+Add a new function to utils.py,read_file,0
+Add a new function to utils.py,list_dir,0
+Add a new function to utils.py,run_terminal_cmd,0
+Add a new function to utils.py,edit_file,1
+Add a new function to utils.py,web_search,0
+How do I use the requests library?,grep_search,0
+How do I use the requests library?,codebase_search,0
+How do I use the requests library?,read_file,0
+How do I use the requests library?,list_dir,0
+How do I use the requests library?,run_terminal_cmd,0
+How do I use the requests library?,edit_file,0
+How do I use the requests library?,web_search,1
+What is the best way to handle exceptions in Python?,grep_search,0
+What is the best way to handle exceptions in Python?,codebase_search,0
+What is the best way to handle exceptions in Python?,read_file,0
+What is the best way to handle exceptions in Python?,list_dir,0
+What is the best way to handle exceptions in Python?,run_terminal_cmd,0
+What is the best way to handle exceptions in Python?,edit_file,0
+What is the best way to handle exceptions in Python?,web_search,1
+Find documentation for scikit-learn LogisticRegression,grep_search,0
+Find documentation for scikit-learn LogisticRegression,codebase_search,0
+Find documentation for scikit-learn LogisticRegression,read_file,0
+Find documentation for scikit-learn LogisticRegression,list_dir,0
+Find documentation for scikit-learn LogisticRegression,run_terminal_cmd,0
+Find documentation for scikit-learn LogisticRegression,edit_file,0
+Find documentation for scikit-learn LogisticRegression,web_search,1
+How to install numpy on Windows?,grep_search,0
+How to install numpy on Windows?,codebase_search,0
+How to install numpy on Windows?,read_file,0
+How to install numpy on Windows?,list_dir,0
+How to install numpy on Windows?,run_terminal_cmd,0
+How to install numpy on Windows?,edit_file,0
+How to install numpy on Windows?,web_search,1
+What are best practices for REST API design?,grep_search,0
+What are best practices for REST API design?,codebase_search,0
+What are best practices for REST API design?,read_file,0
+What are best practices for REST API design?,list_dir,0
+What are best practices for REST API design?,run_terminal_cmd,0
+What are best practices for REST API design?,edit_file,0
+What are best practices for REST API design?,web_search,1
+Find all callers of process_payment() and run the payment tests,grep_search,1
+Find all callers of process_payment() and run the payment tests,codebase_search,1
+Find all callers of process_payment() and run the payment tests,read_file,0
+Find all callers of process_payment() and run the payment tests,list_dir,0
+Find all callers of process_payment() and run the payment tests,run_terminal_cmd,1
+Find all callers of process_payment() and run the payment tests,edit_file,0
+Find all callers of process_payment() and run the payment tests,web_search,0
+Refactor the database module and run tests after,grep_search,0
+Refactor the database module and run tests after,codebase_search,1
+Refactor the database module and run tests after,read_file,0
+Refactor the database module and run tests after,list_dir,0
+Refactor the database module and run tests after,run_terminal_cmd,1
+Refactor the database module and run tests after,edit_file,1
+Refactor the database module and run tests after,web_search,0
+Find the UserModel definition and show me the file,grep_search,0
+Find the UserModel definition and show me the file,codebase_search,1
+Find the UserModel definition and show me the file,read_file,1
+Find the UserModel definition and show me the file,list_dir,0
+Find the UserModel definition and show me the file,run_terminal_cmd,0
+Find the UserModel definition and show me the file,edit_file,0
+Find the UserModel definition and show me the file,web_search,0
+List all test files and run them,grep_search,0
+List all test files and run them,codebase_search,0
+List all test files and run them,read_file,0
+List all test files and run them,list_dir,1
+List all test files and run them,run_terminal_cmd,1
+List all test files and run them,edit_file,0
+List all test files and run them,web_search,0
+Search for deprecated functions and fix them,grep_search,1
+Search for deprecated functions and fix them,codebase_search,0
+Search for deprecated functions and fix them,read_file,0
+Search for deprecated functions and fix them,list_dir,0
+Search for deprecated functions and fix them,run_terminal_cmd,0
+Search for deprecated functions and fix them,edit_file,1
+Search for deprecated functions and fix them,web_search,0
+Find similar authentication code and refactor it,grep_search,0
+Find similar authentication code and refactor it,codebase_search,1
+Find similar authentication code and refactor it,read_file,0
+Find similar authentication code and refactor it,list_dir,0
+Find similar authentication code and refactor it,run_terminal_cmd,0
+Find similar authentication code and refactor it,edit_file,1
+Find similar authentication code and refactor it,web_search,0
+Read the error log and search for the exception,grep_search,1
+Read the error log and search for the exception,codebase_search,0
+Read the error log and search for the exception,read_file,1
+Read the error log and search for the exception,list_dir,0
+Read the error log and search for the exception,run_terminal_cmd,0
+Read the error log and search for the exception,edit_file,0
+Read the error log and search for the exception,web_search,0
+Show me the src folder then read main.py,grep_search,0
+Show me the src folder then read main.py,codebase_search,0
+Show me the src folder then read main.py,read_file,1
+Show me the src folder then read main.py,list_dir,1
+Show me the src folder then read main.py,run_terminal_cmd,0
+Show me the src folder then read main.py,edit_file,0
+Show me the src folder then read main.py,web_search,0
+Find all test functions that use mock objects,grep_search,1
+Find all test functions that use mock objects,codebase_search,1
+Find all test functions that use mock objects,read_file,0
+Find all test functions that use mock objects,list_dir,0
+Find all test functions that use mock objects,run_terminal_cmd,0
+Find all test functions that use mock objects,edit_file,0
+Find all test functions that use mock objects,web_search,0
+Create a new config file and update the imports,grep_search,0
+Create a new config file and update the imports,codebase_search,0
+Create a new config file and update the imports,read_file,0
+Create a new config file and update the imports,list_dir,0
+Create a new config file and update the imports,run_terminal_cmd,0
+Create a new config file and update the imports,edit_file,1
+Create a new config file and update the imports,web_search,0
+Search the web for how to use pandas groupby,grep_search,0
+Search the web for how to use pandas groupby,codebase_search,0
+Search the web for how to use pandas groupby,read_file,0
+Search the web for how to use pandas groupby,list_dir,0
+Search the web for how to use pandas groupby,run_terminal_cmd,0
+Search the web for how to use pandas groupby,edit_file,0
+Search the web for how to use pandas groupby,web_search,1
+Find the implementation of sort_users and optimize it,grep_search,0
+Find the implementation of sort_users and optimize it,codebase_search,1
+Find the implementation of sort_users and optimize it,read_file,0
+Find the implementation of sort_users and optimize it,list_dir,0
+Find the implementation of sort_users and optimize it,run_terminal_cmd,0
+Find the implementation of sort_users and optimize it,edit_file,1
+Find the implementation of sort_users and optimize it,web_search,0
+List the models directory,grep_search,0
+List the models directory,codebase_search,0
+List the models directory,read_file,0
+List the models directory,list_dir,1
+List the models directory,run_terminal_cmd,0
+List the models directory,edit_file,0
+List the models directory,web_search,0
+Run the linter on the entire project,grep_search,0
+Run the linter on the entire project,codebase_search,0
+Run the linter on the entire project,read_file,0
+Run the linter on the entire project,list_dir,0
+Run the linter on the entire project,run_terminal_cmd,1
+Run the linter on the entire project,edit_file,0
+Run the linter on the entire project,web_search,0
+Find all classes that inherit from BaseModel,grep_search,1
+Find all classes that inherit from BaseModel,codebase_search,1
+Find all classes that inherit from BaseModel,read_file,0
+Find all classes that inherit from BaseModel,list_dir,0
+Find all classes that inherit from BaseModel,run_terminal_cmd,0
+Find all classes that inherit from BaseModel,edit_file,0
+Find all classes that inherit from BaseModel,web_search,0
+Find all occurrences of the word password in the codebase,grep_search,1
+Find all occurrences of the word password in the codebase,codebase_search,0
+Find all occurrences of the word password in the codebase,read_file,0
+Find all occurrences of the word password in the codebase,list_dir,0
+Find all occurrences of the word password in the codebase,run_terminal_cmd,0
+Find all occurrences of the word password in the codebase,edit_file,0
+Find all occurrences of the word password in the codebase,web_search,0
+Search for all print statements in the project,grep_search,1
+Search for all print statements in the project,codebase_search,0
+Search for all print statements in the project,read_file,0
+Search for all print statements in the project,list_dir,0
+Search for all print statements in the project,run_terminal_cmd,0
+Search for all print statements in the project,edit_file,0
+Search for all print statements in the project,web_search,0
+Find all files containing the word deprecated,grep_search,1
+Find all files containing the word deprecated,codebase_search,0
+Find all files containing the word deprecated,read_file,0
+Find all files containing the word deprecated,list_dir,0
+Find all files containing the word deprecated,run_terminal_cmd,0
+Find all files containing the word deprecated,edit_file,0
+Find all files containing the word deprecated,web_search,0
+Locate all uses of os.path.join,grep_search,1
+Locate all uses of os.path.join,codebase_search,0
+Locate all uses of os.path.join,read_file,0
+Locate all uses of os.path.join,list_dir,0
+Locate all uses of os.path.join,run_terminal_cmd,0
+Locate all uses of os.path.join,edit_file,0
+Locate all uses of os.path.join,web_search,0
+Find all lines that import numpy,grep_search,1
+Find all lines that import numpy,codebase_search,0
+Find all lines that import numpy,read_file,0
+Find all lines that import numpy,list_dir,0
+Find all lines that import numpy,run_terminal_cmd,0
+Find all lines that import numpy,edit_file,0
+Find all lines that import numpy,web_search,0
+Search for the string connection_string in all files,grep_search,1
+Search for the string connection_string in all files,codebase_search,0
+Search for the string connection_string in all files,read_file,0
+Search for the string connection_string in all files,list_dir,0
+Search for the string connection_string in all files,run_terminal_cmd,0
+Search for the string connection_string in all files,edit_file,0
+Search for the string connection_string in all files,web_search,0
+Find the implementation of the payment processor,grep_search,0
+Find the implementation of the payment processor,codebase_search,1
+Find the implementation of the payment processor,read_file,0
+Find the implementation of the payment processor,list_dir,0
+Find the implementation of the payment processor,run_terminal_cmd,0
+Find the implementation of the payment processor,edit_file,0
+Find the implementation of the payment processor,web_search,0
+Where is the database connection initialized?,grep_search,0
+Where is the database connection initialized?,codebase_search,1
+Where is the database connection initialized?,read_file,0
+Where is the database connection initialized?,list_dir,0
+Where is the database connection initialized?,run_terminal_cmd,0
+Where is the database connection initialized?,edit_file,0
+Where is the database connection initialized?,web_search,0
+Find the class that handles user authentication,grep_search,0
+Find the class that handles user authentication,codebase_search,1
+Find the class that handles user authentication,read_file,0
+Find the class that handles user authentication,list_dir,0
+Find the class that handles user authentication,run_terminal_cmd,0
+Find the class that handles user authentication,edit_file,0
+Find the class that handles user authentication,web_search,0
+Locate the function that sends emails,grep_search,0
+Locate the function that sends emails,codebase_search,1
+Locate the function that sends emails,read_file,0
+Locate the function that sends emails,list_dir,0
+Locate the function that sends emails,run_terminal_cmd,0
+Locate the function that sends emails,edit_file,0
+Locate the function that sends emails,web_search,0
+Find the method responsible for token validation,grep_search,0
+Find the method responsible for token validation,codebase_search,1
+Find the method responsible for token validation,read_file,0
+Find the method responsible for token validation,list_dir,0
+Find the method responsible for token validation,run_terminal_cmd,0
+Find the method responsible for token validation,edit_file,0
+Find the method responsible for token validation,web_search,0
+Where is the logging configuration set up?,grep_search,0
+Where is the logging configuration set up?,codebase_search,1
+Where is the logging configuration set up?,read_file,0
+Where is the logging configuration set up?,list_dir,0
+Where is the logging configuration set up?,run_terminal_cmd,0
+Where is the logging configuration set up?,edit_file,0
+Where is the logging configuration set up?,web_search,0
+Find all functions that call send_email(),grep_search,1
+Find all functions that call send_email(),codebase_search,1
+Find all functions that call send_email(),read_file,0
+Find all functions that call send_email(),list_dir,0
+Find all functions that call send_email(),run_terminal_cmd,0
+Find all functions that call send_email(),edit_file,0
+Find all functions that call send_email(),web_search,0
+Find all callers of validate_token() function,grep_search,1
+Find all callers of validate_token() function,codebase_search,1
+Find all callers of validate_token() function,read_file,0
+Find all callers of validate_token() function,list_dir,0
+Find all callers of validate_token() function,run_terminal_cmd,0
+Find all callers of validate_token() function,edit_file,0
+Find all callers of validate_token() function,web_search,0
+Search for all usages of the UserRepository class,grep_search,1
+Search for all usages of the UserRepository class,codebase_search,1
+Search for all usages of the UserRepository class,read_file,0
+Search for all usages of the UserRepository class,list_dir,0
+Search for all usages of the UserRepository class,run_terminal_cmd,0
+Search for all usages of the UserRepository class,edit_file,0
+Search for all usages of the UserRepository class,web_search,0
+Find all places where DatabaseError is caught,grep_search,1
+Find all places where DatabaseError is caught,codebase_search,1
+Find all places where DatabaseError is caught,read_file,0
+Find all places where DatabaseError is caught,list_dir,0
+Find all places where DatabaseError is caught,run_terminal_cmd,0
+Find all places where DatabaseError is caught,edit_file,0
+Find all places where DatabaseError is caught,web_search,0
+Locate all calls to the render_template function,grep_search,1
+Locate all calls to the render_template function,codebase_search,1
+Locate all calls to the render_template function,read_file,0
+Locate all calls to the render_template function,list_dir,0
+Locate all calls to the render_template function,run_terminal_cmd,0
+Locate all calls to the render_template function,edit_file,0
+Locate all calls to the render_template function,web_search,0
+Show me the content of the .env file,grep_search,0
+Show me the content of the .env file,codebase_search,0
+Show me the content of the .env file,read_file,1
+Show me the content of the .env file,list_dir,0
+Show me the content of the .env file,run_terminal_cmd,0
+Show me the content of the .env file,edit_file,0
+Show me the content of the .env file,web_search,0
+What does the Dockerfile contain?,grep_search,0
+What does the Dockerfile contain?,codebase_search,0
+What does the Dockerfile contain?,read_file,1
+What does the Dockerfile contain?,list_dir,0
+What does the Dockerfile contain?,run_terminal_cmd,0
+What does the Dockerfile contain?,edit_file,0
+What does the Dockerfile contain?,web_search,0
+Display the contents of setup.py,grep_search,0
+Display the contents of setup.py,codebase_search,0
+Display the contents of setup.py,read_file,1
+Display the contents of setup.py,list_dir,0
+Display the contents of setup.py,run_terminal_cmd,0
+Display the contents of setup.py,edit_file,0
+Display the contents of setup.py,web_search,0
+Open the pyproject.toml file,grep_search,0
+Open the pyproject.toml file,codebase_search,0
+Open the pyproject.toml file,read_file,1
+Open the pyproject.toml file,list_dir,0
+Open the pyproject.toml file,run_terminal_cmd,0
+Open the pyproject.toml file,edit_file,0
+Open the pyproject.toml file,web_search,0
+Read the contents of the main.py file,grep_search,0
+Read the contents of the main.py file,codebase_search,0
+Read the contents of the main.py file,read_file,1
+Read the contents of the main.py file,list_dir,0
+Read the contents of the main.py file,run_terminal_cmd,0
+Read the contents of the main.py file,edit_file,0
+Read the contents of the main.py file,web_search,0
+Show me what is inside the constants.py file,grep_search,0
+Show me what is inside the constants.py file,codebase_search,0
+Show me what is inside the constants.py file,read_file,1
+Show me what is inside the constants.py file,list_dir,0
+Show me what is inside the constants.py file,run_terminal_cmd,0
+Show me what is inside the constants.py file,edit_file,0
+Show me what is inside the constants.py file,web_search,0
+View the migration script,grep_search,0
+View the migration script,codebase_search,0
+View the migration script,read_file,1
+View the migration script,list_dir,0
+View the migration script,run_terminal_cmd,0
+View the migration script,edit_file,0
+View the migration script,web_search,0
+What files exist in the tests folder?,grep_search,0
+What files exist in the tests folder?,codebase_search,0
+What files exist in the tests folder?,read_file,0
+What files exist in the tests folder?,list_dir,1
+What files exist in the tests folder?,run_terminal_cmd,0
+What files exist in the tests folder?,edit_file,0
+What files exist in the tests folder?,web_search,0
+Show me the contents of the models directory,grep_search,0
+Show me the contents of the models directory,codebase_search,0
+Show me the contents of the models directory,read_file,0
+Show me the contents of the models directory,list_dir,1
+Show me the contents of the models directory,run_terminal_cmd,0
+Show me the contents of the models directory,edit_file,0
+Show me the contents of the models directory,web_search,0
+List all Python files in the project,grep_search,0
+List all Python files in the project,codebase_search,0
+List all Python files in the project,read_file,0
+List all Python files in the project,list_dir,1
+List all Python files in the project,run_terminal_cmd,0
+List all Python files in the project,edit_file,0
+List all Python files in the project,web_search,0
+What is in the scripts folder?,grep_search,0
+What is in the scripts folder?,codebase_search,0
+What is in the scripts folder?,read_file,0
+What is in the scripts folder?,list_dir,1
+What is in the scripts folder?,run_terminal_cmd,0
+What is in the scripts folder?,edit_file,0
+What is in the scripts folder?,web_search,0
+Show me the project structure,grep_search,0
+Show me the project structure,codebase_search,0
+Show me the project structure,read_file,0
+Show me the project structure,list_dir,1
+Show me the project structure,run_terminal_cmd,0
+Show me the project structure,edit_file,0
+Show me the project structure,web_search,0
+List the files in the data directory,grep_search,0
+List the files in the data directory,codebase_search,0
+List the files in the data directory,read_file,0
+List the files in the data directory,list_dir,1
+List the files in the data directory,run_terminal_cmd,0
+List the files in the data directory,edit_file,0
+List the files in the data directory,web_search,0
+What folders are in the root directory?,grep_search,0
+What folders are in the root directory?,codebase_search,0
+What folders are in the root directory?,read_file,0
+What folders are in the root directory?,list_dir,1
+What folders are in the root directory?,run_terminal_cmd,0
+What folders are in the root directory?,edit_file,0
+What folders are in the root directory?,web_search,0
+Run the database migrations,grep_search,0
+Run the database migrations,codebase_search,0
+Run the database migrations,read_file,0
+Run the database migrations,list_dir,0
+Run the database migrations,run_terminal_cmd,1
+Run the database migrations,edit_file,0
+Run the database migrations,web_search,0
+Execute the setup script,grep_search,0
+Execute the setup script,codebase_search,0
+Execute the setup script,read_file,0
+Execute the setup script,list_dir,0
+Execute the setup script,run_terminal_cmd,1
+Execute the setup script,edit_file,0
+Execute the setup script,web_search,0
+Run pytest with coverage,grep_search,0
+Run pytest with coverage,codebase_search,0
+Run pytest with coverage,read_file,0
+Run pytest with coverage,list_dir,0
+Run pytest with coverage,run_terminal_cmd,1
+Run pytest with coverage,edit_file,0
+Run pytest with coverage,web_search,0
+Start the development server,grep_search,0
+Start the development server,codebase_search,0
+Start the development server,read_file,0
+Start the development server,list_dir,0
+Start the development server,run_terminal_cmd,1
+Start the development server,edit_file,0
+Start the development server,web_search,0
+Run the formatter on all Python files,grep_search,0
+Run the formatter on all Python files,codebase_search,0
+Run the formatter on all Python files,read_file,0
+Run the formatter on all Python files,list_dir,0
+Run the formatter on all Python files,run_terminal_cmd,1
+Run the formatter on all Python files,edit_file,0
+Run the formatter on all Python files,web_search,0
+Execute the deployment pipeline,grep_search,0
+Execute the deployment pipeline,codebase_search,0
+Execute the deployment pipeline,read_file,0
+Execute the deployment pipeline,list_dir,0
+Execute the deployment pipeline,run_terminal_cmd,1
+Execute the deployment pipeline,edit_file,0
+Execute the deployment pipeline,web_search,0
+Run mypy type checking,grep_search,0
+Run mypy type checking,codebase_search,0
+Run mypy type checking,read_file,0
+Run mypy type checking,list_dir,0
+Run mypy type checking,run_terminal_cmd,1
+Run mypy type checking,edit_file,0
+Run mypy type checking,web_search,0
+Install all project dependencies,grep_search,0
+Install all project dependencies,codebase_search,0
+Install all project dependencies,read_file,0
+Install all project dependencies,list_dir,0
+Install all project dependencies,run_terminal_cmd,1
+Install all project dependencies,edit_file,0
+Install all project dependencies,web_search,0
+Create a new file called constants.py,grep_search,0
+Create a new file called constants.py,codebase_search,0
+Create a new file called constants.py,read_file,0
+Create a new file called constants.py,list_dir,0
+Create a new file called constants.py,run_terminal_cmd,0
+Create a new file called constants.py,edit_file,1
+Create a new file called constants.py,web_search,0
+Add error handling to the login function,grep_search,0
+Add error handling to the login function,codebase_search,0
+Add error handling to the login function,read_file,0
+Add error handling to the login function,list_dir,0
+Add error handling to the login function,run_terminal_cmd,0
+Add error handling to the login function,edit_file,1
+Add error handling to the login function,web_search,0
+Update the version number in setup.py,grep_search,0
+Update the version number in setup.py,codebase_search,0
+Update the version number in setup.py,read_file,0
+Update the version number in setup.py,list_dir,0
+Update the version number in setup.py,run_terminal_cmd,0
+Update the version number in setup.py,edit_file,1
+Update the version number in setup.py,web_search,0
+Write a new test for the payment module,grep_search,0
+Write a new test for the payment module,codebase_search,0
+Write a new test for the payment module,read_file,0
+Write a new test for the payment module,list_dir,0
+Write a new test for the payment module,run_terminal_cmd,0
+Write a new test for the payment module,edit_file,1
+Write a new test for the payment module,web_search,0
+Delete the old migration file,grep_search,0
+Delete the old migration file,codebase_search,0
+Delete the old migration file,read_file,0
+Delete the old migration file,list_dir,0
+Delete the old migration file,run_terminal_cmd,0
+Delete the old migration file,edit_file,1
+Delete the old migration file,web_search,0
+Rename the config file to settings.py,grep_search,0
+Rename the config file to settings.py,codebase_search,0
+Rename the config file to settings.py,read_file,0
+Rename the config file to settings.py,list_dir,0
+Rename the config file to settings.py,run_terminal_cmd,0
+Rename the config file to settings.py,edit_file,1
+Rename the config file to settings.py,web_search,0
+Add a docstring to the UserService class,grep_search,0
+Add a docstring to the UserService class,codebase_search,0
+Add a docstring to the UserService class,read_file,0
+Add a docstring to the UserService class,list_dir,0
+Add a docstring to the UserService class,run_terminal_cmd,0
+Add a docstring to the UserService class,edit_file,1
+Add a docstring to the UserService class,web_search,0
+What is the difference between OAuth and JWT?,grep_search,0
+What is the difference between OAuth and JWT?,codebase_search,0
+What is the difference between OAuth and JWT?,read_file,0
+What is the difference between OAuth and JWT?,list_dir,0
+What is the difference between OAuth and JWT?,run_terminal_cmd,0
+What is the difference between OAuth and JWT?,edit_file,0
+What is the difference between OAuth and JWT?,web_search,1
+How do I configure CORS in Flask?,grep_search,0
+How do I configure CORS in Flask?,codebase_search,0
+How do I configure CORS in Flask?,read_file,0
+How do I configure CORS in Flask?,list_dir,0
+How do I configure CORS in Flask?,run_terminal_cmd,0
+How do I configure CORS in Flask?,edit_file,0
+How do I configure CORS in Flask?,web_search,1
+Find the documentation for the boto3 library,grep_search,0
+Find the documentation for the boto3 library,codebase_search,0
+Find the documentation for the boto3 library,read_file,0
+Find the documentation for the boto3 library,list_dir,0
+Find the documentation for the boto3 library,run_terminal_cmd,0
+Find the documentation for the boto3 library,edit_file,0
+Find the documentation for the boto3 library,web_search,1
+What are the best practices for Python logging?,grep_search,0
+What are the best practices for Python logging?,codebase_search,0
+What are the best practices for Python logging?,read_file,0
+What are the best practices for Python logging?,list_dir,0
+What are the best practices for Python logging?,run_terminal_cmd,0
+What are the best practices for Python logging?,edit_file,0
+What are the best practices for Python logging?,web_search,1
+How to deploy a FastAPI application to AWS?,grep_search,0
+How to deploy a FastAPI application to AWS?,codebase_search,0
+How to deploy a FastAPI application to AWS?,read_file,0
+How to deploy a FastAPI application to AWS?,list_dir,0
+How to deploy a FastAPI application to AWS?,run_terminal_cmd,0
+How to deploy a FastAPI application to AWS?,edit_file,0
+How to deploy a FastAPI application to AWS?,web_search,1
+What is the latest version of scikit-learn?,grep_search,0
+What is the latest version of scikit-learn?,codebase_search,0
+What is the latest version of scikit-learn?,read_file,0
+What is the latest version of scikit-learn?,list_dir,0
+What is the latest version of scikit-learn?,run_terminal_cmd,0
+What is the latest version of scikit-learn?,edit_file,0
+What is the latest version of scikit-learn?,web_search,1
+How do I use async await in Python?,grep_search,0
+How do I use async await in Python?,codebase_search,0
+How do I use async await in Python?,read_file,0
+How do I use async await in Python?,list_dir,0
+How do I use async await in Python?,run_terminal_cmd,0
+How do I use async await in Python?,edit_file,0
+How do I use async await in Python?,web_search,1
+Find the send_notification function and update it,grep_search,0
+Find the send_notification function and update it,codebase_search,1
+Find the send_notification function and update it,read_file,0
+Find the send_notification function and update it,list_dir,0
+Find the send_notification function and update it,run_terminal_cmd,0
+Find the send_notification function and update it,edit_file,1
+Find the send_notification function and update it,web_search,0
+Search for all TODO comments and fix them,grep_search,1
+Search for all TODO comments and fix them,codebase_search,0
+Search for all TODO comments and fix them,read_file,0
+Search for all TODO comments and fix them,list_dir,0
+Search for all TODO comments and fix them,run_terminal_cmd,0
+Search for all TODO comments and fix them,edit_file,1
+Search for all TODO comments and fix them,web_search,0
+Find the test files and run them,grep_search,0
+Find the test files and run them,codebase_search,0
+Find the test files and run them,read_file,0
+Find the test files and run them,list_dir,1
+Find the test files and run them,run_terminal_cmd,1
+Find the test files and run them,edit_file,0
+Find the test files and run them,web_search,0
+Read the error log and find the exception location,grep_search,1
+Read the error log and find the exception location,codebase_search,0
+Read the error log and find the exception location,read_file,1
+Read the error log and find the exception location,list_dir,0
+Read the error log and find the exception location,run_terminal_cmd,0
+Read the error log and find the exception location,edit_file,0
+Read the error log and find the exception location,web_search,0
+Find the database models and add a new field,grep_search,0
+Find the database models and add a new field,codebase_search,1
+Find the database models and add a new field,read_file,0
+Find the database models and add a new field,list_dir,0
+Find the database models and add a new field,run_terminal_cmd,0
+Find the database models and add a new field,edit_file,1
+Find the database models and add a new field,web_search,0
+Search for all API endpoints and document them,grep_search,1
+Search for all API endpoints and document them,codebase_search,1
+Search for all API endpoints and document them,read_file,0
+Search for all API endpoints and document them,list_dir,0
+Search for all API endpoints and document them,run_terminal_cmd,0
+Search for all API endpoints and document them,edit_file,1
+Search for all API endpoints and document them,web_search,0
+Find the auth middleware and run the auth tests,grep_search,0
+Find the auth middleware and run the auth tests,codebase_search,1
+Find the auth middleware and run the auth tests,read_file,0
+Find the auth middleware and run the auth tests,list_dir,0
+Find the auth middleware and run the auth tests,run_terminal_cmd,1
+Find the auth middleware and run the auth tests,edit_file,0
+Find the auth middleware and run the auth tests,web_search,0
+List all config files and read the main one,grep_search,0
+List all config files and read the main one,codebase_search,0
+List all config files and read the main one,read_file,1
+List all config files and read the main one,list_dir,1
+List all config files and read the main one,run_terminal_cmd,0
+List all config files and read the main one,edit_file,0
+List all config files and read the main one,web_search,0
+Find all functions that use deprecated methods and update them,grep_search,1
+Find all functions that use deprecated methods and update them,codebase_search,1
+Find all functions that use deprecated methods and update them,read_file,0
+Find all functions that use deprecated methods and update them,list_dir,0
+Find all functions that use deprecated methods and update them,run_terminal_cmd,0
+Find all functions that use deprecated methods and update them,edit_file,1
+Find all functions that use deprecated methods and update them,web_search,0
+Create a new utility module and run the tests to verify,grep_search,0
+Create a new utility module and run the tests to verify,codebase_search,0
+Create a new utility module and run the tests to verify,read_file,0
+Create a new utility module and run the tests to verify,list_dir,0
+Create a new utility module and run the tests to verify,run_terminal_cmd,1
+Create a new utility module and run the tests to verify,edit_file,1
+Create a new utility module and run the tests to verify,web_search,0
+Search for slow database queries and optimize them,grep_search,1
+Search for slow database queries and optimize them,codebase_search,1
+Search for slow database queries and optimize them,read_file,0
+Search for slow database queries and optimize them,list_dir,0
+Search for slow database queries and optimize them,run_terminal_cmd,0
+Search for slow database queries and optimize them,edit_file,1
+Search for slow database queries and optimize them,web_search,0
+Find the UserController class definition,grep_search,0
+Find the UserController class definition,codebase_search,1
+Find the UserController class definition,read_file,0
+Find the UserController class definition,list_dir,0
+Find the UserController class definition,run_terminal_cmd,0
+Find the UserController class definition,edit_file,0
+Find the UserController class definition,web_search,0
+What functions are defined in utils.py?,grep_search,0
+What functions are defined in utils.py?,codebase_search,0
+What functions are defined in utils.py?,read_file,1
+What functions are defined in utils.py?,list_dir,0
+What functions are defined in utils.py?,run_terminal_cmd,0
+What functions are defined in utils.py?,edit_file,0
+What functions are defined in utils.py?,web_search,0
+Find all exception handlers in the codebase,grep_search,1
+Find all exception handlers in the codebase,codebase_search,1
+Find all exception handlers in the codebase,read_file,0
+Find all exception handlers in the codebase,list_dir,0
+Find all exception handlers in the codebase,run_terminal_cmd,0
+Find all exception handlers in the codebase,edit_file,0
+Find all exception handlers in the codebase,web_search,0
+Create a Docker compose file for the project,grep_search,0
+Create a Docker compose file for the project,codebase_search,0
+Create a Docker compose file for the project,read_file,0
+Create a Docker compose file for the project,list_dir,0
+Create a Docker compose file for the project,run_terminal_cmd,0
+Create a Docker compose file for the project,edit_file,1
+Create a Docker compose file for the project,web_search,0
+How to use Redis for caching in Python?,grep_search,0
+How to use Redis for caching in Python?,codebase_search,0
+How to use Redis for caching in Python?,read_file,0
+How to use Redis for caching in Python?,list_dir,0
+How to use Redis for caching in Python?,run_terminal_cmd,0
+How to use Redis for caching in Python?,edit_file,0
+How to use Redis for caching in Python?,web_search,1
+Run the security audit on the project,grep_search,0
+Run the security audit on the project,codebase_search,0
+Run the security audit on the project,read_file,0
+Run the security audit on the project,list_dir,0
+Run the security audit on the project,run_terminal_cmd,1
+Run the security audit on the project,edit_file,0
+Run the security audit on the project,web_search,0
+List all directories in the src folder,grep_search,0
+List all directories in the src folder,codebase_search,0
+List all directories in the src folder,read_file,0
+List all directories in the src folder,list_dir,1
+List all directories in the src folder,run_terminal_cmd,0
+List all directories in the src folder,edit_file,0
+List all directories in the src folder,web_search,0
+Show me the requirements.txt file,grep_search,0
+Show me the requirements.txt file,codebase_search,0
+Show me the requirements.txt file,read_file,1
+Show me the requirements.txt file,list_dir,0
+Show me the requirements.txt file,run_terminal_cmd,0
+Show me the requirements.txt file,edit_file,0
+Show me the requirements.txt file,web_search,0

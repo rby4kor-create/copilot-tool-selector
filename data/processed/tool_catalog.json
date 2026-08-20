@@ -1,0 +1,41 @@
+{
+  "grep_search": {
+    "description": "Exact text pattern or regex search across files",
+    "category": "search",
+    "use_when": "Finding specific strings or patterns in code files"
+  },
+  "codebase_search": {
+    "description": "Semantic search across the entire codebase",
+    "category": "search",
+    "use_when": "Finding code definitions, symbols, or semantic matches"
+  },
+  "read_file": {
+    "description": "Read and display the contents of a specific file",
+    "category": "file_ops",
+    "use_when": "User wants to see the contents of a known file"
+  },
+  "list_dir": {
+    "description": "List files and directories in a path",
+    "category": "file_ops",
+    "use_when": "User wants to see what files or directories exist"
+  },
+  "run_terminal_cmd": {
+    "description": "Execute a terminal or shell command",
+    "category": "execution",
+    "use_when": "User wants to run a command, script, build, or test"
+  },
+  "edit_file": {
+    "description": "Create, edit, or modify a file",
+    "category": "file_ops",
+    "use_when": "User wants to create or modify code or files"
+  },
+  "web_search": {
+    "description": "Search the web for documentation or external information",
+    "category": "search",
+    "use_when": "User wants information from external web sources"
+  },
+  "__meta__": {
+    "version": "1.0.0",
+    "built_at": "2026-08-20T10:06:57.684528+00:00"
+  }
+}
