@@ -1,160 +1,846 @@
-# =============================================================================
-# Production ML Tool Selector Configuration
-# =============================================================================
-
 data:
-  raw_dir: "data/raw"
-  processed_dir: "data/processed"
-  training_source: "synthetic"
-  synthetic_data_path: "data/processed/training_data.csv"
-  manager_data_path: "data/raw/manager_dataset.csv"
-  tool_catalog_path: "data/processed/tool_catalog.json"
-  tool_catalog_version: "2.0.0"
-
+  raw_dir: data/raw
+  processed_dir: data/processed
+  training_source: synthetic
+  synthetic_data_path: data/processed/training_data.csv
+  manager_data_path: data/raw/manager_dataset.csv
+  tool_catalog_path: data/processed/tool_catalog.json
+  tool_catalog_version: 3.0.0
 model:
-  output_dir: "models"
-  artifact_name: "tool_selector_pipeline.joblib"
-  metadata_name: "metadata.json"
-  version: "2.0.0"
-  algorithm: "logistic_regression"
+  output_dir: models
+  artifact_name: tool_selector_pipeline.joblib
+  metadata_name: metadata.json
+  version: 2.0.0
+  algorithm: logistic_regression
   logistic_regression:
     C: 1.0
     max_iter: 2000
-    solver: "lbfgs"
-    class_weight: "balanced"
+    solver: lbfgs
+    class_weight: balanced
     random_state: 42
   linear_svm:
     C: 1.0
     max_iter: 2000
     random_state: 42
-    class_weight: "balanced"
-
+    class_weight: balanced
 features:
   tfidf:
     max_features: 3000
-    ngram_range: [1, 2]
+    ngram_range:
+    - 1
+    - 2
     min_df: 1
     sublinear_tf: true
   keyword_groups:
     grep_search:
-      - "find"
-      - "search"
-      - "grep"
-      - "pattern"
-      - "text"
-      - "string"
-      - "match"
-      - "contain"
-      - "occurrence"
-      - "usage"
-      - "where is"
-      - "locate"
-      - "exact"
-      - "all places"
-      - "all files"
+    - find
+    - search
+    - grep
+    - pattern
+    - text
+    - string
+    - match
+    - contain
+    - occurrence
+    - usage
+    - where is
+    - locate
+    - exact
+    - all places
+    - all files
     codebase_search:
-      - "codebase"
-      - "semantic"
-      - "similar"
-      - "related"
-      - "function"
-      - "class"
-      - "method"
-      - "symbol"
-      - "definition"
-      - "implementation"
-      - "across"
-      - "project"
-      - "who calls"
-      - "callers"
+    - codebase
+    - semantic
+    - similar
+    - related
+    - function
+    - class
+    - method
+    - symbol
+    - definition
+    - implementation
+    - across
+    - project
+    - who calls
+    - callers
     read_file:
-      - "read"
-      - "open"
-      - "view"
-      - "content"
-      - "show file"
-      - "display"
-      - "contents of"
-      - "what is in"
-      - "look at"
-      - "show me"
+    - read
+    - open
+    - view
+    - content
+    - show file
+    - display
+    - contents of
+    - what is in
+    - look at
+    - show me
     list_dir:
-      - "list"
-      - "directory"
-      - "folder"
-      - "files"
-      - "structure"
-      - "what files"
-      - "show files"
-      - "ls"
-      - "tree"
-      - "what is in the"
+    - list
+    - directory
+    - folder
+    - files
+    - structure
+    - what files
+    - show files
+    - ls
+    - tree
+    - what is in the
     run_terminal_cmd:
-      - "run"
-      - "execute"
-      - "command"
-      - "terminal"
-      - "shell"
-      - "bash"
-      - "script"
-      - "install"
-      - "build"
-      - "deploy"
-      - "start"
-      - "launch"
+    - run
+    - execute
+    - command
+    - terminal
+    - shell
+    - bash
+    - script
+    - install
+    - build
+    - deploy
+    - start
+    - launch
     edit_file:
-      - "edit"
-      - "create"
-      - "write"
-      - "modify"
-      - "update"
-      - "change"
-      - "add"
-      - "delete"
-      - "refactor"
-      - "fix"
-      - "rename"
-      - "implement"
+    - edit
+    - create
+    - write
+    - modify
+    - update
+    - change
+    - add
+    - delete
+    - refactor
+    - fix
+    - rename
+    - implement
     web_search:
-      - "web"
-      - "internet"
-      - "documentation"
-      - "docs"
-      - "how to"
-      - "tutorial"
-      - "example"
-      - "library"
-      - "package"
-      - "api reference"
-      - "guide"
-      - "best practice"
-      - "external"
-      - "stackoverflow"
-
+    - web
+    - internet
+    - documentation
+    - docs
+    - how to
+    - tutorial
+    - example
+    - library
+    - package
+    - api reference
+    - guide
+    - best practice
+    - external
+    - stackoverflow
+    actions_get:
+    - actions
+    - build status
+    - ci status
+    - did it pass
+    - get
+    - github actions
+    - is it passing
+    - read operation
+    - run status
+    - single item lookup
+    actions_list:
+    - actions
+    - bulk listing
+    - github actions
+    - list
+    - read operation
+    actions_run_trigger:
+    - actions
+    - deploy
+    - github actions
+    - kick off workflow
+    - run
+    - run workflow
+    - start pipeline
+    - trigger
+    - trigger/execute operation
+    - write operation
+    add_comment_to_pending_review:
+    - add
+    - append/attach operation
+    - comment
+    - pending
+    - pull requests
+    - review
+    - write operation
+    add_issue_comment:
+    - add
+    - append/attach operation
+    - comment
+    - issue
+    - issues
+    - leave a comment
+    - leave a note
+    - post a note
+    - write operation
+    add_reply_to_pull_request_comment:
+    - add
+    - append/attach operation
+    - comment
+    - pull
+    - pull requests
+    - reply
+    - request
+    - request operation
+    - write operation
+    check_dependency_vulnerabilities:
+    - check
+    - dependabot
+    - dependency
+    - dependency risk
+    - read operation
+    - security
+    - validation/check operation
+    - vulnerabilities
+    - vulnerable package
+    create_branch:
+    - branch
+    - create
+    - create new resource
+    - repository
+    - write operation
+    create_gist:
+    - create
+    - create new resource
+    - gist
+    - gists
+    - write operation
+    create_or_update_file:
+    - create
+    - create new resource
+    - edit file
+    - file
+    - file content
+    - or
+    - readme
+    - repository
+    - update
+    - update existing resource
+    - update file content
+    - write operation
+    create_pull_request:
+    - create
+    - create new resource
+    - pull
+    - pull requests
+    - request
+    - request operation
+    - write operation
+    create_repository:
+    - create
+    - create new resource
+    - repository
+    - write operation
+    delete_file:
+    - delete
+    - delete resource
+    - file
+    - repository
+    - write operation
+    discussion_comment_write:
+    - comment
+    - create-or-update operation
+    - discussion
+    - discussions
+    - post reply
+    - reply
+    - respond to discussion
+    - share thoughts
+    - write
+    - write operation
+    dismiss_notification:
+    - dismiss
+    - dismiss/close operation
+    - notification
+    - notifications
+    - write operation
+    fork_repository:
+    - fork
+    - fork/duplicate operation
+    - repository
+    - write operation
+    get_code_quality_finding:
+    - code
+    - code smell
+    - finding
+    - get
+    - lint issue
+    - quality
+    - read operation
+    - security
+    - single item lookup
+    - static analysis
+    get_code_scanning_alert:
+    - alert
+    - code
+    - code vulnerability
+    - get
+    - read operation
+    - scanning
+    - security
+    - security bug
+    - single item lookup
+    - static analysis finding
+    get_commit:
+    - commit
+    - commits
+    - get
+    - read operation
+    - single item lookup
+    get_copilot_space:
+    - copilot
+    - get
+    - read operation
+    - single item lookup
+    - space
+    get_dependabot_alert:
+    - alert
+    - cve
+    - dependabot
+    - get
+    - read operation
+    - security
+    - single item lookup
+    - vulnerabilities
+    - vulnerability
+    - vulnerable dependency
+    get_discussion:
+    - discussion
+    - discussions
+    - get
+    - read operation
+    - single item lookup
+    get_discussion_comments:
+    - comments
+    - discussion
+    - discussions
+    - get
+    - read operation
+    - single item lookup
+    get_file_contents:
+    - contents
+    - file
+    - get
+    - read operation
+    - repository
+    - single item lookup
+    get_gist:
+    - get
+    - gist
+    - gists
+    - read operation
+    - single item lookup
+    get_global_security_advisory:
+    - advisory
+    - cve
+    - get
+    - global
+    - read operation
+    - security
+    - security bulletin
+    - single item lookup
+    get_job_logs:
+    - build failure
+    - ci failure
+    - failed build
+    - get
+    - github actions
+    - job
+    - logs
+    - read operation
+    - single item lookup
+    - why did it fail
+    get_label:
+    - get
+    - label
+    - labels
+    - read operation
+    - single item lookup
+    get_latest_release:
+    - current release
+    - get
+    - latest
+    - most recent release
+    - newest release
+    - read operation
+    - release
+    - releases
+    - single item lookup
+    get_me:
+    - get
+    - me
+    - read operation
+    - single item lookup
+    - users and organizations
+    get_notification_details:
+    - details
+    - get
+    - notification
+    - notifications
+    - read operation
+    - single item lookup
+    get_release_by_tag:
+    - by
+    - get
+    - read operation
+    - release
+    - release by tag name
+    - releases
+    - single item lookup
+    - specific tag
+    - tag
+    - tagged release
+    get_repository_tree:
+    - get
+    - read operation
+    - repository
+    - single item lookup
+    - tree
+    get_secret_scanning_alert:
+    - alert
+    - credential leak
+    - exposed secret
+    - get
+    - leaked credential
+    - read operation
+    - scanning
+    - secret
+    - security
+    - single item lookup
+    get_tag:
+    - get
+    - one tag
+    - read operation
+    - single item lookup
+    - single tag
+    - specific git tag
+    - tag
+    - tags
+    get_team_members:
+    - get
+    - members
+    - read operation
+    - single item lookup
+    - team
+    - users and organizations
+    get_teams:
+    - get
+    - read operation
+    - single item lookup
+    - teams
+    - users and organizations
+    github_support_docs_search:
+    - docs
+    - github
+    - github documentation
+    - read operation
+    - search
+    - search query
+    - support
+    issue_read:
+    - issue
+    - issues
+    - read
+    - read operation
+    - show one issue
+    - single issue lookup
+    - specific issue
+    issue_write:
+    - create-or-update operation
+    - file a bug
+    - file bug report
+    - issue
+    - issues
+    - report a bug
+    - submit bug report
+    - write
+    - write operation
+    label_write:
+    - create-or-update operation
+    - label
+    - labels
+    - write
+    - write operation
+    list_branches:
+    - branches
+    - bulk listing
+    - list
+    - read operation
+    - repository
+    list_code_scanning_alerts:
+    - alerts
+    - bulk listing
+    - code
+    - issues found
+    - list
+    - read operation
+    - scanning
+    - security
+    - security overview
+    list_commits:
+    - bulk listing
+    - commits
+    - list
+    - read operation
+    list_copilot_spaces:
+    - bulk listing
+    - copilot
+    - list
+    - read operation
+    - spaces
+    list_dependabot_alerts:
+    - alerts
+    - bulk listing
+    - cve
+    - dependabot
+    - dependency risk
+    - list
+    - read operation
+    - security
+    - security overview
+    - vulnerabilities
+    - vulnerability
+    - vulnerable dependency
+    list_discussion_categories:
+    - bulk listing
+    - categories
+    - discussion
+    - discussions
+    - list
+    - read operation
+    list_discussions:
+    - bulk listing
+    - discussions
+    - list
+    - read operation
+    list_gists:
+    - bulk listing
+    - gists
+    - list
+    - read operation
+    list_global_security_advisories:
+    - advisories
+    - bulk listing
+    - cve
+    - global
+    - list
+    - read operation
+    - security
+    - security bulletin
+    - vulnerability database
+    list_issue_fields:
+    - bulk listing
+    - fields
+    - issue
+    - issues
+    - list
+    - read operation
+    list_issue_types:
+    - bulk listing
+    - issue
+    - issues
+    - list
+    - read operation
+    - types
+    list_issues:
+    - bulk listing
+    - issues
+    - list
+    - read operation
+    list_label:
+    - bulk listing
+    - label
+    - labels
+    - list
+    - read operation
+    list_notifications:
+    - bulk listing
+    - github inbox
+    - inbox
+    - list
+    - notifications
+    - read operation
+    - unread items
+    list_org_repository_security_advisories:
+    - across repos
+    - advisories
+    - bulk listing
+    - every advisory
+    - list
+    - org
+    - org-wide
+    - organization security
+    - read operation
+    - repository
+    - security
+    list_pull_requests:
+    - bulk listing
+    - list
+    - pull
+    - pull requests
+    - read operation
+    - requests
+    list_releases:
+    - all releases
+    - bulk listing
+    - every release
+    - list
+    - list of releases
+    - read operation
+    - release history
+    - releases
+    list_repository_collaborators:
+    - bulk listing
+    - collaborators
+    - list
+    - read operation
+    - repository
+    list_repository_security_advisories:
+    - advisories
+    - bulk listing
+    - cve
+    - list
+    - read operation
+    - repo vulnerability
+    - repository
+    - security
+    list_secret_scanning_alerts:
+    - alerts
+    - bulk listing
+    - issues found
+    - leaks
+    - list
+    - read operation
+    - scanning
+    - secret
+    - security
+    - security overview
+    list_starred_repositories:
+    - bulk listing
+    - list
+    - read operation
+    - repositories
+    - repository stars
+    - starred
+    list_tags:
+    - bulk listing
+    - list
+    - read operation
+    - tags
+    manage_notification_subscription:
+    - manage
+    - notification
+    - notifications
+    - subscription
+    - subscription management
+    - write operation
+    manage_repository_notification_subscription:
+    - manage
+    - notification
+    - notifications
+    - repository
+    - subscription
+    - subscription management
+    - write operation
+    mark_all_notifications_read:
+    - all
+    - mark
+    - mark status operation
+    - notifications
+    - read
+    - write operation
+    merge_pull_request:
+    - merge
+    - merge operation
+    - pull
+    - pull requests
+    - request
+    - request operation
+    - write operation
+    projects_get:
+    - get
+    - projects
+    - read operation
+    - single item lookup
+    projects_list:
+    - bulk listing
+    - list
+    - projects
+    - read operation
+    projects_write:
+    - add column
+    - board update
+    - create-or-update operation
+    - project board change
+    - projects
+    - update board
+    - write
+    - write operation
+    pull_request_read:
+    - pull
+    - pull requests
+    - read
+    - read operation
+    - request
+    - request operation
+    pull_request_review_write:
+    - create-or-update operation
+    - pull
+    - pull requests
+    - request
+    - request operation
+    - review
+    - write
+    - write operation
+    push_files:
+    - files
+    - push
+    - push/upload operation
+    - repository
+    - write operation
+    request_copilot_review:
+    - copilot
+    - pull requests
+    - request
+    - request operation
+    - review
+    - write operation
+    run_secret_scanning:
+    - credential leak
+    - exposed secret
+    - leaked credential
+    - run
+    - scanning
+    - secret
+    - security
+    - trigger/execute operation
+    - write operation
+    search_code:
+    - code
+    - code search
+    - find references
+    - find usages
+    - function search
+    - identifier search
+    - locate usage
+    - read operation
+    - search
+    - search query
+    - where is this used
+    search_commits:
+    - commits
+    - read operation
+    - search
+    - search query
+    search_issues:
+    - issues
+    - read operation
+    - search
+    - search query
+    search_orgs:
+    - orgs
+    - read operation
+    - search
+    - search query
+    - users and organizations
+    search_pull_requests:
+    - pull
+    - pull requests
+    - read operation
+    - requests
+    - search
+    - search query
+    search_repositories:
+    - read operation
+    - repositories
+    - repository
+    - search
+    - search query
+    search_users:
+    - read operation
+    - search
+    - search query
+    - users
+    - users and organizations
+    semantic_issue_similarity_search:
+    - already reported
+    - duplicate issue
+    - issue
+    - issues
+    - read operation
+    - search
+    - search query
+    - semantic
+    - similar issue
+    - similarity
+    star_repository:
+    - add a star
+    - bookmark operation
+    - bookmark this repo
+    - give a star
+    - repository
+    - repository stars
+    - star
+    - write operation
+    sub_issue_write:
+    - create-or-update operation
+    - issue
+    - issues
+    - sub
+    - write
+    - write operation
+    unstar_repository:
+    - remove bookmark operation
+    - remove star
+    - repository
+    - repository stars
+    - stop starring
+    - take away star
+    - un-star
+    - unstar
+    - write operation
+    update_gist:
+    - gist
+    - gists
+    - update
+    - update existing resource
+    - write operation
+    update_pull_request:
+    - pull
+    - pull requests
+    - request
+    - request operation
+    - update
+    - update existing resource
+    - write operation
+    update_pull_request_branch:
+    - branch
+    - pull
+    - pull requests
+    - request
+    - request operation
+    - update
+    - update existing resource
+    - write operation
 split:
-  test_size: 0.20
-  validation_size: 0.10
+  test_size: 0.2
+  validation_size: 0.1
   random_state: 42
-
 thresholds:
-  default: 0.50
+  default: 0.5
   per_tool:
-    grep_search: 0.50
-    codebase_search: 0.50
-    read_file: 0.50
-    list_dir: 0.50
-    run_terminal_cmd: 0.50
-    edit_file: 0.50
-    web_search: 0.50
-
+    grep_search: 0.5
+    codebase_search: 0.5
+    read_file: 0.5
+    list_dir: 0.5
+    run_terminal_cmd: 0.5
+    edit_file: 0.5
+    web_search: 0.5
 fallback:
-  strategy: "select_all"
+  strategy: select_all
   default_tools: []
-
 logging:
-  level: "INFO"
+  level: INFO
   log_prompt_content: false
-
 experiments:
-  output_dir: "experiments"
+  output_dir: experiments
   track: true

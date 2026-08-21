@@ -34,8 +34,454 @@
     "category": "search",
     "use_when": "User wants information from external web sources"
   },
+  "actions_get": {
+    "description": "Get details about GitHub Actions resources.",
+    "category": "github_actions",
+    "use_when": "actions, build status, ci status, did it pass, get, github actions, is it passing, read operation, run status, single item lookup"
+  },
+  "actions_list": {
+    "description": "List GitHub Actions resources.",
+    "category": "github_actions",
+    "use_when": "actions, bulk listing, github actions, list, read operation"
+  },
+  "actions_run_trigger": {
+    "description": "Trigger or run GitHub Actions workflow operations.",
+    "category": "github_actions",
+    "use_when": "actions, deploy, github actions, kick off workflow, run, run workflow, start pipeline, trigger, trigger/execute operation, write operation"
+  },
+  "add_comment_to_pending_review": {
+    "description": "Add a review comment to a pending (not yet submitted) pull request review.",
+    "category": "pull_requests",
+    "use_when": "add, append/attach operation, comment, pending, pull requests, review, write operation"
+  },
+  "add_issue_comment": {
+    "description": "Add a comment to a GitHub issue.",
+    "category": "issues",
+    "use_when": "add, append/attach operation, comment, issue, issues, leave a comment, leave a note, post a note, write operation"
+  },
+  "add_reply_to_pull_request_comment": {
+    "description": "Reply to an existing comment on a pull request.",
+    "category": "pull_requests",
+    "use_when": "add, append/attach operation, comment, pull, pull requests, reply, request, request operation, write operation"
+  },
+  "check_dependency_vulnerabilities": {
+    "description": "Check dependencies for known vulnerabilities.",
+    "category": "security",
+    "use_when": "check, dependabot, dependency, dependency risk, read operation, security, validation/check operation, vulnerabilities, vulnerable package"
+  },
+  "create_branch": {
+    "description": "Create a new branch in a GitHub repository.",
+    "category": "repository",
+    "use_when": "branch, create, create new resource, repository, write operation"
+  },
+  "create_gist": {
+    "description": "Create a new GitHub Gist.",
+    "category": "gists",
+    "use_when": "create, create new resource, gist, gists, write operation"
+  },
+  "create_or_update_file": {
+    "description": "Create or update a file in a GitHub repository.",
+    "category": "repository",
+    "use_when": "create, create new resource, edit file, file, file content, or, readme, repository, update, update existing resource, update file content, write operation"
+  },
+  "create_pull_request": {
+    "description": "Create a new pull request in a GitHub repository.",
+    "category": "pull_requests",
+    "use_when": "create, create new resource, pull, pull requests, request, request operation, write operation"
+  },
+  "create_repository": {
+    "description": "Create a new GitHub repository.",
+    "category": "repository",
+    "use_when": "create, create new resource, repository, write operation"
+  },
+  "delete_file": {
+    "description": "Delete a file from a GitHub repository.",
+    "category": "repository",
+    "use_when": "delete, delete resource, file, repository, write operation"
+  },
+  "discussion_comment_write": {
+    "description": "Post or update a comment on a GitHub Discussion.",
+    "category": "discussions",
+    "use_when": "comment, create-or-update operation, discussion, discussions, post reply, reply, respond to discussion, share thoughts, write, write operation"
+  },
+  "dismiss_notification": {
+    "description": "Mark a single GitHub notification as read or done.",
+    "category": "notifications",
+    "use_when": "dismiss, dismiss/close operation, notification, notifications, write operation"
+  },
+  "fork_repository": {
+    "description": "Fork a GitHub repository.",
+    "category": "repository",
+    "use_when": "fork, fork/duplicate operation, repository, write operation"
+  },
+  "get_code_quality_finding": {
+    "description": "Get details about a specific code quality finding from static analysis.",
+    "category": "security",
+    "use_when": "code, code smell, finding, get, lint issue, quality, read operation, security, single item lookup, static analysis"
+  },
+  "get_code_scanning_alert": {
+    "description": "Get details about a code scanning alert.",
+    "category": "security",
+    "use_when": "alert, code, code vulnerability, get, read operation, scanning, security, security bug, single item lookup, static analysis finding"
+  },
+  "get_commit": {
+    "description": "Get details for a commit from a GitHub repository.",
+    "category": "commits",
+    "use_when": "commit, commits, get, read operation, single item lookup"
+  },
+  "get_copilot_space": {
+    "description": "Get details about a GitHub Copilot Space.",
+    "category": "copilot",
+    "use_when": "copilot, get, read operation, single item lookup, space"
+  },
+  "get_dependabot_alert": {
+    "description": "Get details about a Dependabot alert.",
+    "category": "security",
+    "use_when": "alert, cve, dependabot, get, read operation, security, single item lookup, vulnerabilities, vulnerability, vulnerable dependency"
+  },
+  "get_discussion": {
+    "description": "Get details about a specific GitHub Discussion.",
+    "category": "discussions",
+    "use_when": "discussion, discussions, get, read operation, single item lookup"
+  },
+  "get_discussion_comments": {
+    "description": "List the comments on a GitHub Discussion.",
+    "category": "discussions",
+    "use_when": "comments, discussion, discussions, get, read operation, single item lookup"
+  },
+  "get_file_contents": {
+    "description": "Get the contents of a file or directory from a GitHub repository.",
+    "category": "repository",
+    "use_when": "contents, file, get, read operation, repository, single item lookup"
+  },
+  "get_gist": {
+    "description": "Get the contents and metadata of a GitHub Gist.",
+    "category": "gists",
+    "use_when": "get, gist, gists, read operation, single item lookup"
+  },
+  "get_global_security_advisory": {
+    "description": "Get details about a GitHub-wide (global) security advisory.",
+    "category": "security",
+    "use_when": "advisory, cve, get, global, read operation, security, security bulletin, single item lookup"
+  },
+  "get_job_logs": {
+    "description": "Get logs for GitHub Actions workflow jobs.",
+    "category": "github_actions",
+    "use_when": "build failure, ci failure, failed build, get, github actions, job, logs, read operation, single item lookup, why did it fail"
+  },
+  "get_label": {
+    "description": "Get details about a specific repository label.",
+    "category": "labels",
+    "use_when": "get, label, labels, read operation, single item lookup"
+  },
+  "get_latest_release": {
+    "description": "Get the most recent published release for a repository.",
+    "category": "releases",
+    "use_when": "current release, get, latest, most recent release, newest release, read operation, release, releases, single item lookup"
+  },
+  "get_me": {
+    "description": "Get profile information about the currently authenticated GitHub user.",
+    "category": "users_and_organizations",
+    "use_when": "get, me, read operation, single item lookup, users and organizations"
+  },
+  "get_notification_details": {
+    "description": "Get details about a specific GitHub notification.",
+    "category": "notifications",
+    "use_when": "details, get, notification, notifications, read operation, single item lookup"
+  },
+  "get_release_by_tag": {
+    "description": "Get details about a release identified by its tag name.",
+    "category": "releases",
+    "use_when": "by, get, read operation, release, release by tag name, releases, single item lookup, specific tag, tag, tagged release"
+  },
+  "get_repository_tree": {
+    "description": "Get the tree structure of a GitHub repository.",
+    "category": "repository",
+    "use_when": "get, read operation, repository, single item lookup, tree"
+  },
+  "get_secret_scanning_alert": {
+    "description": "Get details about a specific secret scanning alert.",
+    "category": "security",
+    "use_when": "alert, credential leak, exposed secret, get, leaked credential, read operation, scanning, secret, security, single item lookup"
+  },
+  "get_tag": {
+    "description": "Get details about a specific Git tag.",
+    "category": "tags",
+    "use_when": "get, one tag, read operation, single item lookup, single tag, specific git tag, tag, tags"
+  },
+  "get_team_members": {
+    "description": "List the members of a GitHub team.",
+    "category": "users_and_organizations",
+    "use_when": "get, members, read operation, single item lookup, team, users and organizations"
+  },
+  "get_teams": {
+    "description": "List the teams in a GitHub organization.",
+    "category": "users_and_organizations",
+    "use_when": "get, read operation, single item lookup, teams, users and organizations"
+  },
+  "github_support_docs_search": {
+    "description": "Search official GitHub product and support documentation.",
+    "category": "github_documentation",
+    "use_when": "docs, github, github documentation, read operation, search, search query, support"
+  },
+  "issue_read": {
+    "description": "Get information about a specific GitHub issue.",
+    "category": "issues",
+    "use_when": "issue, issues, read, read operation, show one issue, single issue lookup, specific issue"
+  },
+  "issue_write": {
+    "description": "Create or update a GitHub issue.",
+    "category": "issues",
+    "use_when": "create-or-update operation, file a bug, file bug report, issue, issues, report a bug, submit bug report, write, write operation"
+  },
+  "label_write": {
+    "description": "Create or update a repository label (name, color, description).",
+    "category": "labels",
+    "use_when": "create-or-update operation, label, labels, write, write operation"
+  },
+  "list_branches": {
+    "description": "List the branches in a GitHub repository.",
+    "category": "repository",
+    "use_when": "branches, bulk listing, list, read operation, repository"
+  },
+  "list_code_scanning_alerts": {
+    "description": "List code scanning alerts.",
+    "category": "security",
+    "use_when": "alerts, bulk listing, code, issues found, list, read operation, scanning, security, security overview"
+  },
+  "list_commits": {
+    "description": "List commits for a GitHub repository.",
+    "category": "commits",
+    "use_when": "bulk listing, commits, list, read operation"
+  },
+  "list_copilot_spaces": {
+    "description": "List GitHub Copilot Spaces accessible to the user.",
+    "category": "copilot",
+    "use_when": "bulk listing, copilot, list, read operation, spaces"
+  },
+  "list_dependabot_alerts": {
+    "description": "List Dependabot alerts.",
+    "category": "security",
+    "use_when": "alerts, bulk listing, cve, dependabot, dependency risk, list, read operation, security, security overview, vulnerabilities, vulnerability, vulnerable dependency"
+  },
+  "list_discussion_categories": {
+    "description": "List the discussion categories configured for a repository.",
+    "category": "discussions",
+    "use_when": "bulk listing, categories, discussion, discussions, list, read operation"
+  },
+  "list_discussions": {
+    "description": "List GitHub Discussions in a repository.",
+    "category": "discussions",
+    "use_when": "bulk listing, discussions, list, read operation"
+  },
+  "list_gists": {
+    "description": "List Gists owned by a user.",
+    "category": "gists",
+    "use_when": "bulk listing, gists, list, read operation"
+  },
+  "list_global_security_advisories": {
+    "description": "List security advisories published across GitHub, optionally filtered by ecosystem/severity.",
+    "category": "security",
+    "use_when": "advisories, bulk listing, cve, global, list, read operation, security, security bulletin, vulnerability database"
+  },
+  "list_issue_fields": {
+    "description": "List the custom fields available on issues in a repository or project.",
+    "category": "issues",
+    "use_when": "bulk listing, fields, issue, issues, list, read operation"
+  },
+  "list_issue_types": {
+    "description": "List the issue types configured for a repository or organization.",
+    "category": "issues",
+    "use_when": "bulk listing, issue, issues, list, read operation, types"
+  },
+  "list_issues": {
+    "description": "List issues in a GitHub repository.",
+    "category": "issues",
+    "use_when": "bulk listing, issues, list, read operation"
+  },
+  "list_label": {
+    "description": "List the labels defined on a repository.",
+    "category": "labels",
+    "use_when": "bulk listing, label, labels, list, read operation"
+  },
+  "list_notifications": {
+    "description": "List GitHub notifications for the authenticated user.",
+    "category": "notifications",
+    "use_when": "bulk listing, github inbox, inbox, list, notifications, read operation, unread items"
+  },
+  "list_org_repository_security_advisories": {
+    "description": "List security advisories across all repositories in an organization.",
+    "category": "security",
+    "use_when": "across repos, advisories, bulk listing, every advisory, list, org, org-wide, organization security, read operation, repository, security"
+  },
+  "list_pull_requests": {
+    "description": "List pull requests in a GitHub repository.",
+    "category": "pull_requests",
+    "use_when": "bulk listing, list, pull, pull requests, read operation, requests"
+  },
+  "list_releases": {
+    "description": "List the published releases for a repository.",
+    "category": "releases",
+    "use_when": "all releases, bulk listing, every release, list, list of releases, read operation, release history, releases"
+  },
+  "list_repository_collaborators": {
+    "description": "List the collaborators who have access to a repository.",
+    "category": "repository",
+    "use_when": "bulk listing, collaborators, list, read operation, repository"
+  },
+  "list_repository_security_advisories": {
+    "description": "List security advisories for a specific repository.",
+    "category": "security",
+    "use_when": "advisories, bulk listing, cve, list, read operation, repo vulnerability, repository, security"
+  },
+  "list_secret_scanning_alerts": {
+    "description": "List secret scanning alerts.",
+    "category": "security",
+    "use_when": "alerts, bulk listing, issues found, leaks, list, read operation, scanning, secret, security, security overview"
+  },
+  "list_starred_repositories": {
+    "description": "List repositories starred by a user.",
+    "category": "repository_stars",
+    "use_when": "bulk listing, list, read operation, repositories, repository stars, starred"
+  },
+  "list_tags": {
+    "description": "List the Git tags in a repository.",
+    "category": "tags",
+    "use_when": "bulk listing, list, read operation, tags"
+  },
+  "manage_notification_subscription": {
+    "description": "Subscribe to or unsubscribe from notifications for a specific thread.",
+    "category": "notifications",
+    "use_when": "manage, notification, notifications, subscription, subscription management, write operation"
+  },
+  "manage_repository_notification_subscription": {
+    "description": "Subscribe to or unsubscribe from notifications for an entire repository.",
+    "category": "notifications",
+    "use_when": "manage, notification, notifications, repository, subscription, subscription management, write operation"
+  },
+  "mark_all_notifications_read": {
+    "description": "Mark all GitHub notifications as read.",
+    "category": "notifications",
+    "use_when": "all, mark, mark status operation, notifications, read, write operation"
+  },
+  "merge_pull_request": {
+    "description": "Merge a pull request in a GitHub repository.",
+    "category": "pull_requests",
+    "use_when": "merge, merge operation, pull, pull requests, request, request operation, write operation"
+  },
+  "projects_get": {
+    "description": "Get details about a GitHub Projects board.",
+    "category": "projects",
+    "use_when": "get, projects, read operation, single item lookup"
+  },
+  "projects_list": {
+    "description": "List GitHub Projects boards for a user, repository, or organization.",
+    "category": "projects",
+    "use_when": "bulk listing, list, projects, read operation"
+  },
+  "projects_write": {
+    "description": "Create or update a GitHub Projects board or its items.",
+    "category": "projects",
+    "use_when": "add column, board update, create-or-update operation, project board change, projects, update board, write, write operation"
+  },
+  "pull_request_read": {
+    "description": "Get information about a specific pull request.",
+    "category": "pull_requests",
+    "use_when": "pull, pull requests, read, read operation, request, request operation"
+  },
+  "pull_request_review_write": {
+    "description": "Submit, update, or dismiss a pull request review.",
+    "category": "pull_requests",
+    "use_when": "create-or-update operation, pull, pull requests, request, request operation, review, write, write operation"
+  },
+  "push_files": {
+    "description": "Push multiple files to a GitHub repository in a single commit.",
+    "category": "repository",
+    "use_when": "files, push, push/upload operation, repository, write operation"
+  },
+  "request_copilot_review": {
+    "description": "Request a GitHub Copilot automated code review on a pull request.",
+    "category": "pull_requests",
+    "use_when": "copilot, pull requests, request, request operation, review, write operation"
+  },
+  "run_secret_scanning": {
+    "description": "Scan content for potential secrets.",
+    "category": "security",
+    "use_when": "credential leak, exposed secret, leaked credential, run, scanning, secret, security, trigger/execute operation, write operation"
+  },
+  "search_code": {
+    "description": "Search code across GitHub repositories.",
+    "category": "code_search",
+    "use_when": "code, code search, find references, find usages, function search, identifier search, locate usage, read operation, search, search query, where is this used"
+  },
+  "search_commits": {
+    "description": "Search for commits across GitHub repositories.",
+    "category": "commits",
+    "use_when": "commits, read operation, search, search query"
+  },
+  "search_issues": {
+    "description": "Search GitHub issues.",
+    "category": "issues",
+    "use_when": "issues, read operation, search, search query"
+  },
+  "search_orgs": {
+    "description": "Search GitHub organizations.",
+    "category": "users_and_organizations",
+    "use_when": "orgs, read operation, search, search query, users and organizations"
+  },
+  "search_pull_requests": {
+    "description": "Search for pull requests across GitHub repositories.",
+    "category": "pull_requests",
+    "use_when": "pull, pull requests, read operation, requests, search, search query"
+  },
+  "search_repositories": {
+    "description": "Search for GitHub repositories.",
+    "category": "repository",
+    "use_when": "read operation, repositories, repository, search, search query"
+  },
+  "search_users": {
+    "description": "Search GitHub users.",
+    "category": "users_and_organizations",
+    "use_when": "read operation, search, search query, users, users and organizations"
+  },
+  "semantic_issue_similarity_search": {
+    "description": "Find issues that are semantically similar to a given issue or description, to detect duplicates.",
+    "category": "issues",
+    "use_when": "already reported, duplicate issue, issue, issues, read operation, search, search query, semantic, similar issue, similarity"
+  },
+  "star_repository": {
+    "description": "Star a GitHub repository.",
+    "category": "repository_stars",
+    "use_when": "add a star, bookmark operation, bookmark this repo, give a star, repository, repository stars, star, write operation"
+  },
+  "sub_issue_write": {
+    "description": "Create, update, or link a sub-issue to a parent issue.",
+    "category": "issues",
+    "use_when": "create-or-update operation, issue, issues, sub, write, write operation"
+  },
+  "unstar_repository": {
+    "description": "Remove a star from a GitHub repository.",
+    "category": "repository_stars",
+    "use_when": "remove bookmark operation, remove star, repository, repository stars, stop starring, take away star, un-star, unstar, write operation"
+  },
+  "update_gist": {
+    "description": "Update the content or description of an existing Gist.",
+    "category": "gists",
+    "use_when": "gist, gists, update, update existing resource, write operation"
+  },
+  "update_pull_request": {
+    "description": "Update an existing pull request.",
+    "category": "pull_requests",
+    "use_when": "pull, pull requests, request, request operation, update, update existing resource, write operation"
+  },
+  "update_pull_request_branch": {
+    "description": "Update a pull request's branch with the latest changes from its base branch.",
+    "category": "pull_requests",
+    "use_when": "branch, pull, pull requests, request, request operation, update, update existing resource, write operation"
+  },
   "__meta__": {
-    "version": "1.0.0",
-    "built_at": "2026-08-20T10:06:57.684528+00:00"
+    "version": "3.0.0",
+    "built_at": "2026-08-20T11:18:23.315864+00:00",
+    "source": "7 original IDE-agent tools + 89 real GitHub MCP tools (from copilot-ml-tool-selector project)"
   }
 }

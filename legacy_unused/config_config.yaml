@@ -1,0 +1,138 @@
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  training_source: "synthetic"
+  synthetic_data_path: "data/processed/training_data.csv"
+  manager_data_path: "data/raw/manager_dataset.csv"
+  tool_catalog_path: "data/processed/tool_catalog.json"
+  tool_catalog_version: "1.0.0"
+
+model:
+  output_dir: "models"
+  artifact_name: "tool_selector_pipeline.joblib"
+  metadata_name: "metadata.json"
+  version: "1.0.0"
+  algorithm: "logistic_regression"
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+    solver: "lbfgs"
+    class_weight: "balanced"
+    random_state: 42
+
+features:
+  tfidf:
+    max_features: 2000
+    ngram_range: [1, 2]
+    min_df: 1
+    sublinear_tf: true
+  keyword_groups:
+    grep_search:
+      - "find"
+      - "search"
+      - "grep"
+      - "pattern"
+      - "text"
+      - "string"
+      - "match"
+      - "contain"
+      - "occurrence"
+      - "usage"
+      - "where is"
+      - "locate"
+      - "exact"
+    codebase_search:
+      - "codebase"
+      - "semantic"
+      - "similar"
+      - "related"
+      - "function"
+      - "class"
+      - "method"
+      - "symbol"
+      - "definition"
+      - "implementation"
+      - "across"
+      - "project"
+    read_file:
+      - "read"
+      - "open"
+      - "view"
+      - "content"
+      - "show file"
+      - "display"
+      - "contents of"
+      - "what is in"
+      - "look at"
+    list_dir:
+      - "list"
+      - "directory"
+      - "folder"
+      - "files"
+      - "structure"
+      - "what files"
+      - "show files"
+      - "ls"
+      - "tree"
+    run_terminal_cmd:
+      - "run"
+      - "execute"
+      - "command"
+      - "terminal"
+      - "shell"
+      - "bash"
+      - "script"
+      - "install"
+      - "build"
+      - "test"
+      - "deploy"
+    edit_file:
+      - "edit"
+      - "create"
+      - "write"
+      - "modify"
+      - "update"
+      - "change"
+      - "add"
+      - "delete"
+      - "refactor"
+      - "fix"
+      - "rename"
+    web_search:
+      - "web"
+      - "internet"
+      - "documentation"
+      - "docs"
+      - "how to"
+      - "tutorial"
+      - "example"
+      - "library"
+      - "package"
+      - "api"
+      - "guide"
+      - "best practice"
+      - "external"
+
+split:
+  test_size: 0.20
+  validation_size: 0.10
+  random_state: 42
+
+thresholds:
+  default: 0.50
+  per_tool:
+    grep_search: 0.50
+    codebase_search: 0.50
+    read_file: 0.50
+    list_dir: 0.50
+    run_terminal_cmd: 0.50
+    edit_file: 0.50
+    web_search: 0.50
+
+fallback:
+  strategy: "select_all"
+  default_tools: []
+
+logging:
+  level: "INFO"
+  log_prompt_content: false

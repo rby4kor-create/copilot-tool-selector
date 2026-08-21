@@ -1,123 +1,6198 @@
 [
-  {"prompt": "Find all functions that call authenticate_user()", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Search for all usages of login() in the codebase", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Find all occurrences of TODO comments", "relevant_tools": ["grep_search"]},
-  {"prompt": "Locate the definition of UserService class", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Find code similar to this authentication logic", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Search for all imports of pandas library", "relevant_tools": ["grep_search"]},
-  {"prompt": "Find all methods that return None", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Find all occurrences of the word password in the codebase", "relevant_tools": ["grep_search"]},
-  {"prompt": "Search for all print statements in the project", "relevant_tools": ["grep_search"]},
-  {"prompt": "Find all files containing the word deprecated", "relevant_tools": ["grep_search"]},
-  {"prompt": "Locate all uses of os.path.join", "relevant_tools": ["grep_search"]},
-  {"prompt": "Find all lines that import numpy", "relevant_tools": ["grep_search"]},
-  {"prompt": "Search for the string connection_string in all files", "relevant_tools": ["grep_search"]},
-  {"prompt": "Find all functions that call send_email()", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Find all callers of validate_token() function", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Search for all usages of the UserRepository class", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Find all places where DatabaseError is caught", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Locate all calls to the render_template function", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Find the implementation of the payment processor", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Where is the database connection initialized?", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Find the class that handles user authentication", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Locate the function that sends emails", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Find the method responsible for token validation", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Where is the logging configuration set up?", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Find the UserController class definition", "relevant_tools": ["codebase_search"]},
-  {"prompt": "Find all exception handlers in the codebase", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "What files are in the src directory?", "relevant_tools": ["list_dir"]},
-  {"prompt": "List all files in the project root", "relevant_tools": ["list_dir"]},
-  {"prompt": "Show me the directory structure", "relevant_tools": ["list_dir"]},
-  {"prompt": "What is in the config folder?", "relevant_tools": ["list_dir"]},
-  {"prompt": "Show all folders in data/", "relevant_tools": ["list_dir"]},
-  {"prompt": "What files exist in the tests folder?", "relevant_tools": ["list_dir"]},
-  {"prompt": "Show me the contents of the models directory", "relevant_tools": ["list_dir"]},
-  {"prompt": "List all Python files in the project", "relevant_tools": ["list_dir"]},
-  {"prompt": "What is in the scripts folder?", "relevant_tools": ["list_dir"]},
-  {"prompt": "Show me the project structure", "relevant_tools": ["list_dir"]},
-  {"prompt": "List the files in the data directory", "relevant_tools": ["list_dir"]},
-  {"prompt": "What folders are in the root directory?", "relevant_tools": ["list_dir"]},
-  {"prompt": "List the models directory", "relevant_tools": ["list_dir"]},
-  {"prompt": "Read the contents of README.md", "relevant_tools": ["read_file"]},
-  {"prompt": "Show me what is in config.yaml", "relevant_tools": ["read_file"]},
-  {"prompt": "Open the requirements.txt file", "relevant_tools": ["read_file"]},
-  {"prompt": "Display the contents of src/train.py", "relevant_tools": ["read_file"]},
-  {"prompt": "View the main configuration file", "relevant_tools": ["read_file"]},
-  {"prompt": "Show me the content of the .env file", "relevant_tools": ["read_file"]},
-  {"prompt": "What does the Dockerfile contain?", "relevant_tools": ["read_file"]},
-  {"prompt": "Display the contents of setup.py", "relevant_tools": ["read_file"]},
-  {"prompt": "Open the pyproject.toml file", "relevant_tools": ["read_file"]},
-  {"prompt": "Read the contents of the main.py file", "relevant_tools": ["read_file"]},
-  {"prompt": "Show me what is inside the constants.py file", "relevant_tools": ["read_file"]},
-  {"prompt": "View the migration script", "relevant_tools": ["read_file"]},
-  {"prompt": "What functions are defined in utils.py?", "relevant_tools": ["read_file"]},
-  {"prompt": "Show me the requirements.txt file", "relevant_tools": ["read_file"]},
-  {"prompt": "Run the test suite", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Execute the build script", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Install the dependencies", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Run python train.py", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Execute all unit tests with pytest", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Deploy the application", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Run the database migrations", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Execute the setup script", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Run pytest with coverage", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Start the development server", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Run the formatter on all Python files", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Execute the deployment pipeline", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Run mypy type checking", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Install all project dependencies", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Run the security audit on the project", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Run the linter on the entire project", "relevant_tools": ["run_terminal_cmd"]},
-  {"prompt": "Edit the configuration file", "relevant_tools": ["edit_file"]},
-  {"prompt": "Create a new Python file called helper.py", "relevant_tools": ["edit_file"]},
-  {"prompt": "Modify the train.py to add logging", "relevant_tools": ["edit_file"]},
-  {"prompt": "Fix the bug in predict.py", "relevant_tools": ["edit_file", "codebase_search"]},
-  {"prompt": "Update the README with new instructions", "relevant_tools": ["edit_file"]},
-  {"prompt": "Add a new function to utils.py", "relevant_tools": ["edit_file"]},
-  {"prompt": "Create a new file called constants.py", "relevant_tools": ["edit_file"]},
-  {"prompt": "Add error handling to the login function", "relevant_tools": ["edit_file"]},
-  {"prompt": "Update the version number in setup.py", "relevant_tools": ["edit_file"]},
-  {"prompt": "Write a new test for the payment module", "relevant_tools": ["edit_file"]},
-  {"prompt": "Delete the old migration file", "relevant_tools": ["edit_file"]},
-  {"prompt": "Rename the config file to settings.py", "relevant_tools": ["edit_file"]},
-  {"prompt": "Add a docstring to the UserService class", "relevant_tools": ["edit_file"]},
-  {"prompt": "Create a Docker compose file for the project", "relevant_tools": ["edit_file"]},
-  {"prompt": "How do I use the requests library?", "relevant_tools": ["web_search"]},
-  {"prompt": "What is the best way to handle exceptions in Python?", "relevant_tools": ["web_search"]},
-  {"prompt": "Find documentation for scikit-learn LogisticRegression", "relevant_tools": ["web_search"]},
-  {"prompt": "How to install numpy on Windows?", "relevant_tools": ["web_search"]},
-  {"prompt": "What are best practices for REST API design?", "relevant_tools": ["web_search"]},
-  {"prompt": "What is the difference between OAuth and JWT?", "relevant_tools": ["web_search"]},
-  {"prompt": "How do I configure CORS in Flask?", "relevant_tools": ["web_search"]},
-  {"prompt": "Find the documentation for the boto3 library", "relevant_tools": ["web_search"]},
-  {"prompt": "What are the best practices for Python logging?", "relevant_tools": ["web_search"]},
-  {"prompt": "How to deploy a FastAPI application to AWS?", "relevant_tools": ["web_search"]},
-  {"prompt": "What is the latest version of scikit-learn?", "relevant_tools": ["web_search"]},
-  {"prompt": "How do I use async await in Python?", "relevant_tools": ["web_search"]},
-  {"prompt": "How to use Redis for caching in Python?", "relevant_tools": ["web_search"]},
-  {"prompt": "Search the web for how to use pandas groupby", "relevant_tools": ["web_search"]},
-  {"prompt": "Find all callers of process_payment() and run the payment tests", "relevant_tools": ["grep_search", "codebase_search", "run_terminal_cmd"]},
-  {"prompt": "Refactor the database module and run tests after", "relevant_tools": ["edit_file", "codebase_search", "run_terminal_cmd"]},
-  {"prompt": "Find the UserModel definition and show me the file", "relevant_tools": ["codebase_search", "read_file"]},
-  {"prompt": "List all test files and run them", "relevant_tools": ["list_dir", "run_terminal_cmd"]},
-  {"prompt": "Search for deprecated functions and fix them", "relevant_tools": ["grep_search", "edit_file"]},
-  {"prompt": "Find similar authentication code and refactor it", "relevant_tools": ["codebase_search", "edit_file"]},
-  {"prompt": "Read the error log and search for the exception", "relevant_tools": ["read_file", "grep_search"]},
-  {"prompt": "Show me the src folder then read main.py", "relevant_tools": ["list_dir", "read_file"]},
-  {"prompt": "Find all test functions that use mock objects", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Find the send_notification function and update it", "relevant_tools": ["codebase_search", "edit_file"]},
-  {"prompt": "Search for all TODO comments and fix them", "relevant_tools": ["grep_search", "edit_file"]},
-  {"prompt": "Find the test files and run them", "relevant_tools": ["list_dir", "run_terminal_cmd"]},
-  {"prompt": "Find the database models and add a new field", "relevant_tools": ["codebase_search", "edit_file"]},
-  {"prompt": "Search for all API endpoints and document them", "relevant_tools": ["grep_search", "codebase_search", "edit_file"]},
-  {"prompt": "Find the auth middleware and run the auth tests", "relevant_tools": ["codebase_search", "run_terminal_cmd"]},
-  {"prompt": "List all config files and read the main one", "relevant_tools": ["list_dir", "read_file"]},
-  {"prompt": "Find all functions that use deprecated methods and update them", "relevant_tools": ["grep_search", "codebase_search", "edit_file"]},
-  {"prompt": "Create a new utility module and run the tests to verify", "relevant_tools": ["edit_file", "run_terminal_cmd"]},
-  {"prompt": "Search for slow database queries and optimize them", "relevant_tools": ["grep_search", "codebase_search", "edit_file"]},
-  {"prompt": "Refactor the UserService class and run the tests", "relevant_tools": ["edit_file", "codebase_search", "run_terminal_cmd"]},
-  {"prompt": "Find the implementation of sort_users and optimize it", "relevant_tools": ["codebase_search", "edit_file"]},
-  {"prompt": "Find all classes that inherit from BaseModel", "relevant_tools": ["grep_search", "codebase_search"]},
-  {"prompt": "Create a new config file and update the imports", "relevant_tools": ["edit_file"]},
-  {"prompt": "Find all classes that extend BaseModel", "relevant_tools": ["grep_search", "codebase_search"]}
+  {
+    "prompt": "Find all functions that call authenticate_user()",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Search for all usages of login() in the codebase",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all occurrences of TODO comments",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Locate the definition of UserService class",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find code similar to this authentication logic",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Search for all imports of pandas library",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find all methods that return None",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all occurrences of the word password in the codebase",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Search for all print statements in the project",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find all files containing the word deprecated",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Locate all uses of os.path.join",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find all lines that import numpy",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Search for the string connection_string in all files",
+    "relevant_tools": [
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Find all functions that call send_email()",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all callers of validate_token() function",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Search for all usages of the UserRepository class",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all places where DatabaseError is caught",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Locate all calls to the render_template function",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find the implementation of the payment processor",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Where is the database connection initialized?",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find the class that handles user authentication",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Locate the function that sends emails",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find the method responsible for token validation",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Where is the logging configuration set up?",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find the UserController class definition",
+    "relevant_tools": [
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find all exception handlers in the codebase",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "What files are in the src directory?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "List all files in the project root",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show me the directory structure",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "What is in the config folder?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show all folders in data/",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "What files exist in the tests folder?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show me the contents of the models directory",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "List all Python files in the project",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "What is in the scripts folder?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show me the project structure",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "List the files in the data directory",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "What folders are in the root directory?",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "List the models directory",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Read the contents of README.md",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Show me what is in config.yaml",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Open the requirements.txt file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Display the contents of src/train.py",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "View the main configuration file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Show me the content of the .env file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "What does the Dockerfile contain?",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Display the contents of setup.py",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Open the pyproject.toml file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Read the contents of the main.py file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Show me what is inside the constants.py file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "View the migration script",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "What functions are defined in utils.py?",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Show me the requirements.txt file",
+    "relevant_tools": [
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Run the test suite",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Execute the build script",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Install the dependencies",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run python train.py",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Execute all unit tests with pytest",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Deploy the application",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run the database migrations",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Execute the setup script",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run pytest with coverage",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Start the development server",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run the formatter on all Python files",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Execute the deployment pipeline",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run mypy type checking",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Install all project dependencies",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run the security audit on the project",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Run the linter on the entire project",
+    "relevant_tools": [
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Edit the configuration file",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Create a new Python file called helper.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Modify the train.py to add logging",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Fix the bug in predict.py",
+    "relevant_tools": [
+      "edit_file",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Update the README with new instructions",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Add a new function to utils.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Create a new file called constants.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Add error handling to the login function",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Update the version number in setup.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Write a new test for the payment module",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Delete the old migration file",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Rename the config file to settings.py",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Add a docstring to the UserService class",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Create a Docker compose file for the project",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "How do I use the requests library?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What is the best way to handle exceptions in Python?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Find documentation for scikit-learn LogisticRegression",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How to install numpy on Windows?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What are best practices for REST API design?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What is the difference between OAuth and JWT?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How do I configure CORS in Flask?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Find the documentation for the boto3 library",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What are the best practices for Python logging?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How to deploy a FastAPI application to AWS?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "What is the latest version of scikit-learn?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How do I use async await in Python?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "How to use Redis for caching in Python?",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Search the web for how to use pandas groupby",
+    "relevant_tools": [
+      "web_search"
+    ]
+  },
+  {
+    "prompt": "Find all callers of process_payment() and run the payment tests",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Refactor the database module and run tests after",
+    "relevant_tools": [
+      "edit_file",
+      "codebase_search",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Find the UserModel definition and show me the file",
+    "relevant_tools": [
+      "codebase_search",
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "List all test files and run them",
+    "relevant_tools": [
+      "list_dir",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Search for deprecated functions and fix them",
+    "relevant_tools": [
+      "grep_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find similar authentication code and refactor it",
+    "relevant_tools": [
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Read the error log and search for the exception",
+    "relevant_tools": [
+      "read_file",
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "Show me the src folder then read main.py",
+    "relevant_tools": [
+      "list_dir",
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Find all test functions that use mock objects",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Find the send_notification function and update it",
+    "relevant_tools": [
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Search for all TODO comments and fix them",
+    "relevant_tools": [
+      "grep_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find the test files and run them",
+    "relevant_tools": [
+      "list_dir",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Find the database models and add a new field",
+    "relevant_tools": [
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Search for all API endpoints and document them",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find the auth middleware and run the auth tests",
+    "relevant_tools": [
+      "codebase_search",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "List all config files and read the main one",
+    "relevant_tools": [
+      "list_dir",
+      "read_file"
+    ]
+  },
+  {
+    "prompt": "Find all functions that use deprecated methods and update them",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Create a new utility module and run the tests to verify",
+    "relevant_tools": [
+      "edit_file",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Search for slow database queries and optimize them",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Refactor the UserService class and run the tests",
+    "relevant_tools": [
+      "edit_file",
+      "codebase_search",
+      "run_terminal_cmd"
+    ]
+  },
+  {
+    "prompt": "Find the implementation of sort_users and optimize it",
+    "relevant_tools": [
+      "codebase_search",
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find all classes that inherit from BaseModel",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Create a new config file and update the imports",
+    "relevant_tools": [
+      "edit_file"
+    ]
+  },
+  {
+    "prompt": "Find all classes that extend BaseModel",
+    "relevant_tools": [
+      "grep_search",
+      "codebase_search"
+    ]
+  },
+  {
+    "prompt": "Read the error log and find the exception location",
+    "relevant_tools": [
+      "read_file",
+      "grep_search"
+    ]
+  },
+  {
+    "prompt": "List all directories in the src folder",
+    "relevant_tools": [
+      "list_dir"
+    ]
+  },
+  {
+    "prompt": "Show me the details of PR #142.",
+    "relevant_tools": [
+      "pull_request_read"
+    ]
+  },
+  {
+    "prompt": "Read PR #219 for me.",
+    "relevant_tools": [
+      "pull_request_read"
+    ]
+  },
+  {
+    "prompt": "What does pull request 87 contain?",
+    "relevant_tools": [
+      "pull_request_read"
+    ]
+  },
+  {
+    "prompt": "Create a pull request from feature/login into main.",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "Open a new PR merging hotfix/timeout-bug into develop.",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "Merge PR #142.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "Go ahead and merge pull request 219 into main.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "Update the description on PR #77 to mention the new API changes.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Change the title of pull request 42.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Bring PR #142's branch up to date with main.",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "List all open pull requests targeting main.",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Show me every pull request currently open in this repo.",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Search for pull requests mentioning 'authentication timeout'.",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Leave a comment on the pending review for PR #90.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Reply to the review comment on line 42 of PR #90.",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "Submit my review on PR #55 approving the changes.",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "Ask Copilot to review PR #201.",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "Show me issue #310.",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "What's in issue 88?",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "List the open issues in this repository.",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "Search for issues mentioning 'database connection failures'.",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Find issues related to memory leaks in the parser.",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Create an issue describing the authentication bug we found yesterday.",
+    "relevant_tools": [
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "File a new bug report about the broken login flow.",
+    "relevant_tools": [
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "Add a comment to issue #310 explaining the workaround.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Check if issue #310 already has a duplicate open elsewhere.",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "Create a sub-issue under #310 for the frontend fix.",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "What issue types are configured for this repo?",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "What custom fields exist on issues in this project?",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "Is the latest CI workflow run passing?",
+    "relevant_tools": [
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "List the recent GitHub Actions runs for this repo.",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "Show me the failed GitHub Actions job logs.",
+    "relevant_tools": [
+      "get_job_logs"
+    ]
+  },
+  {
+    "prompt": "Why did the build job fail? Pull the logs.",
+    "relevant_tools": [
+      "get_job_logs"
+    ]
+  },
+  {
+    "prompt": "Trigger the deployment workflow.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Kick off the nightly test workflow manually.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Check this repository for dependency vulnerabilities.",
+    "relevant_tools": [
+      "check_dependency_vulnerabilities"
+    ]
+  },
+  {
+    "prompt": "List the current Dependabot alerts.",
+    "relevant_tools": [
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Show me details on Dependabot alert #14.",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "List secret scanning alerts for this repo.",
+    "relevant_tools": [
+      "list_secret_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Get the details on secret scanning alert #3.",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Scan this repository's content for exposed secrets.",
+    "relevant_tools": [
+      "run_secret_scanning"
+    ]
+  },
+  {
+    "prompt": "List code scanning alerts on the main branch.",
+    "relevant_tools": [
+      "list_code_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Show details for code scanning alert #7.",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Are there any global security advisories affecting the requests library?",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Get details on security advisory GHSA-abcd-1234.",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "List security advisories across our whole organization's repos.",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "List the security advisories specific to this one repository.",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Pull up the code quality finding flagged in the last static analysis run.",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "Show me the contents of src/services/auth.py.",
+    "relevant_tools": [
+      "get_file_contents"
+    ]
+  },
+  {
+    "prompt": "What's in the config/settings.yaml file?",
+    "relevant_tools": [
+      "get_file_contents"
+    ]
+  },
+  {
+    "prompt": "Show me the file tree for this repository.",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "Create a new repository called billing-service.",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "Create a new branch called feature/payment-retry.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "List all branches in this repository.",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "Delete the old config.bak file from the repo.",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Update the README.md file with the new setup instructions.",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Push these three changed files as a single commit.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Fork this repository into my personal account.",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "Search for repositories related to vector databases.",
+    "relevant_tools": [
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Who has collaborator access to this repository?",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "Who last modified payment_processor.py and what does that commit look like?",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "Show me the commit history for this repository.",
+    "relevant_tools": [
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "Search commits mentioning 'fix race condition'.",
+    "relevant_tools": [
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Find all references to authenticateUser.",
+    "relevant_tools": [
+      "search_code"
+    ]
+  },
+  {
+    "prompt": "Locate every usage of the JWT validation function.",
+    "relevant_tools": [
+      "search_code"
+    ]
+  },
+  {
+    "prompt": "What does the 'needs-triage' label look like -- color and description?",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "List all labels defined on this repository.",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "Create a new label called 'flaky-test' colored yellow.",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Show me the discussion about the new plugin architecture.",
+    "relevant_tools": [
+      "get_discussion"
+    ]
+  },
+  {
+    "prompt": "What discussion categories exist in this repo?",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "List the open discussions in this repository.",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "Show the comments on the roadmap discussion.",
+    "relevant_tools": [
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "Post a comment on the plugin architecture discussion agreeing with the proposal.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "What's the latest release of this project?",
+    "relevant_tools": [
+      "get_latest_release"
+    ]
+  },
+  {
+    "prompt": "Show me the release tagged v2.3.0.",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "List all releases for this repository.",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "Show details for the v2.3.0 tag.",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "List the tags in this repository.",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "Show me the contents of my gist about regex snippets.",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "List my gists.",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "Create a gist with this Python one-liner.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "Update my existing gist to add the new example.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Show my unread GitHub notifications.",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "What's the detail on that CI failure notification?",
+    "relevant_tools": [
+      "get_notification_details"
+    ]
+  },
+  {
+    "prompt": "Dismiss that notification about the merged PR.",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "Mark all my GitHub notifications as read.",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "Unsubscribe me from notifications on this one thread.",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Stop notifying me about activity on this whole repository.",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Show me the Q3 roadmap project board.",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "List the project boards for this repository.",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "Add a new column to the Q3 roadmap project board.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "What repositories have I starred?",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "Star this repository.",
+    "relevant_tools": [
+      "star_repository"
+    ]
+  },
+  {
+    "prompt": "Remove my star from this repo.",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Who am I logged in as right now?",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "List the members of the platform-infra team.",
+    "relevant_tools": [
+      "get_team_members"
+    ]
+  },
+  {
+    "prompt": "What teams exist in this organization?",
+    "relevant_tools": [
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "Search for GitHub users named 'yogeshwar'.",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "Find organizations related to open-source database tooling.",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Show me the details of my 'billing-refactor' Copilot Space.",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "List my available Copilot Spaces.",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "Search GitHub's docs for how branch protection rules work.",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "Check whether the repository dependencies have known vulnerabilities.",
+    "relevant_tools": [
+      "check_dependency_vulnerabilities",
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Give me a full security overview: any secret leaks, code scanning issues, or vulnerable dependencies?",
+    "relevant_tools": [
+      "list_secret_scanning_alerts",
+      "list_code_scanning_alerts",
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Before merging PR #142, show me its details and check CI status.",
+    "relevant_tools": [
+      "pull_request_read",
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "Find the file with the auth bug and open an issue about it.",
+    "relevant_tools": [
+      "get_file_contents",
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "Locate where the session timeout is handled and file a bug for it.",
+    "relevant_tools": [
+      "get_file_contents",
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "Are there any known vulnerabilities in this repo's dependencies?",
+    "relevant_tools": [
+      "check_dependency_vulnerabilities"
+    ]
+  },
+  {
+    "prompt": "Show me the open Dependabot alerts for this project.",
+    "relevant_tools": [
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Pull up Dependabot alert number 14's details.",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "Any leaked API keys or tokens showing up in secret scanning?",
+    "relevant_tools": [
+      "list_secret_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "What does secret scanning alert #3 say exactly?",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Run a scan across this repo to look for exposed credentials.",
+    "relevant_tools": [
+      "run_secret_scanning"
+    ]
+  },
+  {
+    "prompt": "What static analysis issues came up on the main branch?",
+    "relevant_tools": [
+      "list_code_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Give me the full detail on code scanning alert #7.",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Is there a published CVE affecting the requests library we depend on?",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Look up advisory GHSA-abcd-1234 for me.",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "Show every security advisory across all our org's repos.",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "What advisories are specific to just this repository?",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "What did the last static analysis flag as a code quality issue?",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "Do a full dependency risk check on this repository.",
+    "relevant_tools": [
+      "check_dependency_vulnerabilities",
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Run a complete security sweep -- secrets, code issues, dependency risk, all of it.",
+    "relevant_tools": [
+      "list_secret_scanning_alerts",
+      "list_code_scanning_alerts",
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Is the workflow run currently green or red?",
+    "relevant_tools": [
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "Show me recent workflow runs for this repo.",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "Show me commit abc123's details.",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "What's the recent commit history look like?",
+    "relevant_tools": [
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "Find commits about the retry logic fix.",
+    "relevant_tools": [
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Open my 'billing-refactor' Copilot Space.",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "What Copilot Spaces do I have access to?",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "What categories can a new discussion be posted under?",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "Reply to the roadmap discussion with my thoughts.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "Pull all the comments from the plugin architecture discussion.",
+    "relevant_tools": [
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "Open the discussion about the new caching layer.",
+    "relevant_tools": [
+      "get_discussion"
+    ]
+  },
+  {
+    "prompt": "What discussions are currently active in this repo?",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "Look up GitHub's docs on required status checks.",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "Save this code snippet as a new gist.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "Open my gist with the regex cheatsheet.",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "What gists do I currently have?",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "Add the new example to my existing gist.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Leave a note on issue #310 about the workaround.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Has anyone already reported this same bug?",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "What custom fields can be set on an issue here?",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "Show me the open issues in this repo.",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "Break this issue into a smaller sub-task.",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "What issue types can I choose from here?",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "What color and description does the 'bug' label have?",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "Show me every label defined here.",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "Add a red 'blocked' label to this repo.",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Clear that one notification about the merged PR.",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "What's that CI failure notification actually about?",
+    "relevant_tools": [
+      "get_notification_details"
+    ]
+  },
+  {
+    "prompt": "Show me what's in my GitHub inbox.",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "Clear out all my notifications at once.",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "Turn off notifications for this whole repo.",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Unfollow this one specific notification thread.",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Search for organizations working on graph databases.",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Who's on the platform-infra team?",
+    "relevant_tools": [
+      "get_team_members"
+    ]
+  },
+  {
+    "prompt": "List all the teams in our org.",
+    "relevant_tools": [
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "Whose account am I currently authenticated as?",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "Look up the GitHub user handle 'yogeshwar'.",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "Ask Copilot to give PR #201 an automated review.",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "Before I merge PR #142, check its status and whether CI passed.",
+    "relevant_tools": [
+      "pull_request_read",
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "Comment on the pending review for PR #90 about the naming.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Reply to that review thread on PR #90.",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "Approve PR #55 with my review.",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "Find pull requests about the timeout fix.",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Sync PR #142's branch with the latest main.",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "Open the Q3 roadmap board.",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "What project boards exist for this repo?",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "Add a new column to the roadmap board.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "What's the newest release we've shipped?",
+    "relevant_tools": [
+      "get_latest_release"
+    ]
+  },
+  {
+    "prompt": "List out all our published releases.",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "Cut a new branch called feature/payment-retry.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "What branches exist in this repo?",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "Who has access to this repository?",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "Spin up a new repo called billing-service.",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "Remove the outdated config.bak file.",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Update the setup instructions in README.md.",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Fork this repo into my own account.",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "Push these changed files up as one commit.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Find repositories related to vector search.",
+    "relevant_tools": [
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Show me this repo's full folder structure.",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "Give this repo a star.",
+    "relevant_tools": [
+      "star_repository"
+    ]
+  },
+  {
+    "prompt": "Which repos have I starred so far?",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "Take my star off this repo.",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Show details for the v2.3.0 Git tag.",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "What tags exist on this repo?",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "The build failed -- show me why, and tell me if the run overall is red or green.",
+    "relevant_tools": [
+      "get_job_logs",
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "Pull the failure logs for the last run and check its overall status too.",
+    "relevant_tools": [
+      "get_job_logs",
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "Prep the release notes: show me the latest release and the commits since then.",
+    "relevant_tools": [
+      "get_latest_release",
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "What's changed since our last release? Show the release and the commit history.",
+    "relevant_tools": [
+      "get_latest_release",
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "Catch me up on the plugin architecture discussion -- show it and all the comments.",
+    "relevant_tools": [
+      "get_discussion",
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "Open the roadmap discussion and pull every comment on it too.",
+    "relevant_tools": [
+      "get_discussion",
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "What was that CI failure notification about, and what's the PR it's tied to?",
+    "relevant_tools": [
+      "get_notification_details",
+      "pull_request_read"
+    ]
+  },
+  {
+    "prompt": "Show me the detail on that merged-PR notification and pull up the actual PR.",
+    "relevant_tools": [
+      "get_notification_details",
+      "pull_request_read"
+    ]
+  },
+  {
+    "prompt": "Before I fork this repo, check it for exposed secrets and vulnerable dependencies.",
+    "relevant_tools": [
+      "run_secret_scanning",
+      "check_dependency_vulnerabilities"
+    ]
+  },
+  {
+    "prompt": "Give this repo a quick security pass -- any leaked secrets or risky dependencies?",
+    "relevant_tools": [
+      "run_secret_scanning",
+      "check_dependency_vulnerabilities"
+    ]
+  },
+  {
+    "prompt": "Star this repo, and also find similar repositories about vector databases.",
+    "relevant_tools": [
+      "star_repository",
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Add a star to this one and look up other repos doing similar vector-search work.",
+    "relevant_tools": [
+      "star_repository",
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Find where the retry logic was last changed -- search the code and check the commit history.",
+    "relevant_tools": [
+      "search_code",
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Trace the retry logic: search for it in the codebase and find the commits that touched it.",
+    "relevant_tools": [
+      "search_code",
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Give me an overview of the platform-infra team -- who's on it, and what teams exist overall?",
+    "relevant_tools": [
+      "get_team_members",
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "Who's on platform-infra, and while you're at it, list every team in the org.",
+    "relevant_tools": [
+      "get_team_members",
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "List the open pull requests for this repo.",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "List all pull requests currently open.",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Get the latest release for this repository.",
+    "relevant_tools": [
+      "get_latest_release"
+    ]
+  },
+  {
+    "prompt": "Get me the most recent release version.",
+    "relevant_tools": [
+      "get_latest_release"
+    ]
+  },
+  {
+    "prompt": "Add a comment to this issue explaining the bug.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Add a note on issue #12 about the root cause.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Update the README file with new setup instructions.",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Update the config file with the new API key.",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Search the codebase for authenticateUser.",
+    "relevant_tools": [
+      "search_code"
+    ]
+  },
+  {
+    "prompt": "Search the repository for TODO comments.",
+    "relevant_tools": [
+      "search_code"
+    ]
+  },
+  {
+    "prompt": "Run the deployment workflow for this branch.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Trigger the CI pipeline for the main branch.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Check if there are any vulnerabilities in our dependencies.",
+    "relevant_tools": [
+      "check_dependency_vulnerabilities"
+    ]
+  },
+  {
+    "prompt": "Check for known security issues in the requests library.",
+    "relevant_tools": [
+      "check_dependency_vulnerabilities"
+    ]
+  },
+  {
+    "prompt": "Show me every open pull request assigned to me.",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Which pull requests are still open right now?",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Get the release notes for version 2.3.0.",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "Get me the details on the v2.3.0 tagged release.",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "Add a label to flag this issue as high priority.",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Tag this issue with the 'urgent' label.",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Update the pull request description with the new scope.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Change the title on that open pull request.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Find every place in the repo that calls this API.",
+    "relevant_tools": [
+      "search_code"
+    ]
+  },
+  {
+    "prompt": "Search for the word 'deprecated' across all files.",
+    "relevant_tools": [
+      "search_code"
+    ]
+  },
+  {
+    "prompt": "Kick off the release workflow for the main branch.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Start the nightly build pipeline manually.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Check whether this pull request is safe to merge.",
+    "relevant_tools": [
+      "pull_request_read"
+    ]
+  },
+  {
+    "prompt": "Check the CI status before I merge this branch.",
+    "relevant_tools": [
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "Write the docstring for this function.",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Write these new files directly to the branch.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Write a review comment on this pull request.",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "Write up the release notes for this tag.",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "What's the capital of France?",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "What's the capital of Japan?",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Write me a haiku about autumn.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Write a short poem about the ocean.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Can you sort this list of numbers: [5, 2, 8, 1]?",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "List the first ten prime numbers for me.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Book me a flight to Tokyo next Tuesday.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Create a reservation for two at an Italian restaurant tonight.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "What's the weather going to be like this weekend?",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Get me the forecast for tomorrow in Seattle.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Translate 'good morning' into Japanese.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Search for the French word for 'butterfly'.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Set a reminder for my dentist appointment.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Update my calendar with a 3pm meeting tomorrow.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Tell me a joke.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "What's a good recipe for banana bread?",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "What's the current stock price of Apple?",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Get me the latest exchange rate for USD to EUR.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Help me write a cover letter for a marketing job.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Review my resume and suggest improvements.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "List my grocery items for this week.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "List the top ten highest mountains in the world.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Get me a table reservation for dinner tonight.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Get the current time in London.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Add milk and eggs to my shopping list.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Add a new event to my personal calendar.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Update my profile picture on Instagram.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Update the thermostat schedule for winter.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Search for cheap flights to Paris next month.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Search my photos for pictures of the beach.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Run me through a five-minute meditation.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Trigger my phone's alarm for six AM.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Check my spelling in this email before I send it.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Check if this parking spot is legal on Sundays.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "List every song on my workout playlist.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "List the ingredients I need for lasagna.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Get directions to the nearest pharmacy.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Get my horoscope for today.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Add a birthday reminder to my phone.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Add two cups of flour to the recipe.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Update the seat assignment on my flight booking.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Update the volume settings on my TV.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Search for a good pizza place nearby.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Search my email for the invoice from last month.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Run a quick diagnostic on my laptop's battery.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Start a timer for twenty minutes.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Check the weather forecast before my hike tomorrow.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Check my bank balance before I make this purchase.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Write me a haiku about the changing seasons.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Write a birthday message for my sister.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Write a short story about a dragon.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "Write a thank-you note for a job interview.",
+    "relevant_tools": []
+  },
+  {
+    "prompt": "What is github actions?",
+    "relevant_tools": [
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "I need to see github actions.",
+    "relevant_tools": [
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "Check github actions.",
+    "relevant_tools": [
+      "actions_get"
+    ]
+  },
+  {
+    "prompt": "Display github actions.",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "Can you list GitHub Actions resources?",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "Show me github actions.",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "List GitHub Actions resources.",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "Look up github actions for this repo.",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "Run github actions.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Trigger github actions.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Execute github actions.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Kick off github actions.",
+    "relevant_tools": [
+      "actions_run_trigger"
+    ]
+  },
+  {
+    "prompt": "Submit pull requests.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Post pull requests.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Add pull requests.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Add a review comment to a pending (not yet submitted) pull request review.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Write pull requests.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Add issues.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Post issues.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Submit issues.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Add a comment to a GitHub issue.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Write issues.",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Reply to an existing comment on a pull request.",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "Check dependencies for known vulnerabilities.",
+    "relevant_tools": [
+      "check_dependency_vulnerabilities"
+    ]
+  },
+  {
+    "prompt": "Display security.",
+    "relevant_tools": [
+      "check_dependency_vulnerabilities"
+    ]
+  },
+  {
+    "prompt": "Add repository.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "Create repository.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "I want to add repository.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "Set up repository.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "Create a new branch in a GitHub repository.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "Set up gists.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "Create gists.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "Add gists.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "Create a new GitHub Gist.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "I want to add gists.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "Create or update a file in a GitHub repository.",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Create a new pull request in a GitHub repository.",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "Set up pull requests.",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "Create pull requests.",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "I want to add pull requests.",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "Create a new GitHub repository.",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "Delete repository.",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Get rid of repository.",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Remove repository.",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Delete a file from a GitHub repository.",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Post or update a comment on a GitHub Discussion.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "Write discussions.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "Submit discussions.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "Post discussions.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "Add discussions.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "Delete notifications.",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "Remove notifications.",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "Get rid of notifications.",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "Mark a single GitHub notification as read or done.",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "Fork a GitHub repository.",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "Look up security for this repo.",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a specific code quality finding from static analysis?",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "Check security.",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "Get details about a specific code quality finding from static analysis.",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "What is security?",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "I need to see security.",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "Show me security.",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "Get details about a code scanning alert.",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a code scanning alert?",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Show me commits.",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "I need to see commits.",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "Display commits.",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "Can you get details for a commit from a GitHub repository?",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "Get details for a commit from a GitHub repository.",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "Check commits.",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "What is commits?",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "Look up commits for this repo.",
+    "relevant_tools": [
+      "get_commit"
+    ]
+  },
+  {
+    "prompt": "Show me copilot.",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "Look up copilot for this repo.",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "What is copilot?",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "I need to see copilot.",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "Display copilot.",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "Check copilot.",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "Get details about a GitHub Copilot Space.",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a GitHub Copilot Space?",
+    "relevant_tools": [
+      "get_copilot_space"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a Dependabot alert?",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "Get details about a Dependabot alert.",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "Show me discussions.",
+    "relevant_tools": [
+      "get_discussion"
+    ]
+  },
+  {
+    "prompt": "Display discussions.",
+    "relevant_tools": [
+      "get_discussion"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a specific GitHub Discussion?",
+    "relevant_tools": [
+      "get_discussion"
+    ]
+  },
+  {
+    "prompt": "Check discussions.",
+    "relevant_tools": [
+      "get_discussion"
+    ]
+  },
+  {
+    "prompt": "What is discussions?",
+    "relevant_tools": [
+      "get_discussion"
+    ]
+  },
+  {
+    "prompt": "Get details about a specific GitHub Discussion.",
+    "relevant_tools": [
+      "get_discussion"
+    ]
+  },
+  {
+    "prompt": "Look up discussions for this repo.",
+    "relevant_tools": [
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "List the comments on a GitHub Discussion.",
+    "relevant_tools": [
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "I need to see discussions.",
+    "relevant_tools": [
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "Can you list the comments on a GitHub Discussion?",
+    "relevant_tools": [
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "Show me repository.",
+    "relevant_tools": [
+      "get_file_contents"
+    ]
+  },
+  {
+    "prompt": "Can you get the contents of a file or directory from a GitHub repository?",
+    "relevant_tools": [
+      "get_file_contents"
+    ]
+  },
+  {
+    "prompt": "Look up repository for this repo.",
+    "relevant_tools": [
+      "get_file_contents"
+    ]
+  },
+  {
+    "prompt": "Display repository.",
+    "relevant_tools": [
+      "get_file_contents"
+    ]
+  },
+  {
+    "prompt": "I need to see repository.",
+    "relevant_tools": [
+      "get_file_contents"
+    ]
+  },
+  {
+    "prompt": "Check repository.",
+    "relevant_tools": [
+      "get_file_contents"
+    ]
+  },
+  {
+    "prompt": "Can you get the contents and metadata of a GitHub Gist?",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "Display gists.",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "Check gists.",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "Show me gists.",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "What is gists?",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "Look up gists for this repo.",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "I need to see gists.",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "Get the contents and metadata of a GitHub Gist.",
+    "relevant_tools": [
+      "get_gist"
+    ]
+  },
+  {
+    "prompt": "Get details about a GitHub-wide (global) security advisory.",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a GitHub-wide (global) security advisory?",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "Get logs for GitHub Actions workflow jobs.",
+    "relevant_tools": [
+      "get_job_logs"
+    ]
+  },
+  {
+    "prompt": "Can you get logs for GitHub Actions workflow jobs?",
+    "relevant_tools": [
+      "get_job_logs"
+    ]
+  },
+  {
+    "prompt": "Check labels.",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "Get details about a specific repository label.",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "I need to see labels.",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "Look up labels for this repo.",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "Display labels.",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "Show me labels.",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a specific repository label?",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "What is labels?",
+    "relevant_tools": [
+      "get_label"
+    ]
+  },
+  {
+    "prompt": "Look up releases for this repo.",
+    "relevant_tools": [
+      "get_latest_release"
+    ]
+  },
+  {
+    "prompt": "Show me releases.",
+    "relevant_tools": [
+      "get_latest_release"
+    ]
+  },
+  {
+    "prompt": "Get the most recent published release for a repository.",
+    "relevant_tools": [
+      "get_latest_release"
+    ]
+  },
+  {
+    "prompt": "What is releases?",
+    "relevant_tools": [
+      "get_latest_release"
+    ]
+  },
+  {
+    "prompt": "Check users and organizations.",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "Can you get profile information about the currently authenticated GitHub user?",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "What is users and organizations?",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "Look up users and organizations for this repo.",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "I need to see users and organizations.",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "Display users and organizations.",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "Get profile information about the currently authenticated GitHub user.",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "Show me users and organizations.",
+    "relevant_tools": [
+      "get_me"
+    ]
+  },
+  {
+    "prompt": "What is notifications?",
+    "relevant_tools": [
+      "get_notification_details"
+    ]
+  },
+  {
+    "prompt": "Get details about a specific GitHub notification.",
+    "relevant_tools": [
+      "get_notification_details"
+    ]
+  },
+  {
+    "prompt": "I need to see notifications.",
+    "relevant_tools": [
+      "get_notification_details"
+    ]
+  },
+  {
+    "prompt": "Show me notifications.",
+    "relevant_tools": [
+      "get_notification_details"
+    ]
+  },
+  {
+    "prompt": "Check notifications.",
+    "relevant_tools": [
+      "get_notification_details"
+    ]
+  },
+  {
+    "prompt": "Look up notifications for this repo.",
+    "relevant_tools": [
+      "get_notification_details"
+    ]
+  },
+  {
+    "prompt": "Get details about a release identified by its tag name.",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "Display releases.",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "Check releases.",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a release identified by its tag name?",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "I need to see releases.",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "Get the tree structure of a GitHub repository.",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "Can you get the tree structure of a GitHub repository?",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "What is repository?",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a specific secret scanning alert?",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Get details about a specific secret scanning alert.",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Display tags.",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "What is tags?",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "Get details about a specific Git tag.",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a specific Git tag?",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "Show me tags.",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "Look up tags for this repo.",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "Check tags.",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "I need to see tags.",
+    "relevant_tools": [
+      "get_tag"
+    ]
+  },
+  {
+    "prompt": "Can you list the members of a GitHub team?",
+    "relevant_tools": [
+      "get_team_members"
+    ]
+  },
+  {
+    "prompt": "List the members of a GitHub team.",
+    "relevant_tools": [
+      "get_team_members"
+    ]
+  },
+  {
+    "prompt": "Can you list the teams in a GitHub organization?",
+    "relevant_tools": [
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "List the teams in a GitHub organization.",
+    "relevant_tools": [
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "Display github documentation.",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "Check github documentation.",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "Search official GitHub product and support documentation.",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "Look up github documentation for this repo.",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "I need to see github documentation.",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "Can you search official GitHub product and support documentation?",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "Show me github documentation.",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "What is github documentation?",
+    "relevant_tools": [
+      "github_support_docs_search"
+    ]
+  },
+  {
+    "prompt": "Get information about a specific GitHub issue.",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "Check issues.",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "What is issues?",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "I need to see issues.",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "Display issues.",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "Can you get information about a specific GitHub issue?",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "Look up issues for this repo.",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "Show me issues.",
+    "relevant_tools": [
+      "issue_read"
+    ]
+  },
+  {
+    "prompt": "Create or update a GitHub issue.",
+    "relevant_tools": [
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "Post labels.",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Submit labels.",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Write labels.",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Create or update a repository label (name, color, description).",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Add labels.",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "What repository exist?",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "List the branches in a GitHub repository.",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "Give me every repository.",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "Show all repository.",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "List repository.",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "List code scanning alerts.",
+    "relevant_tools": [
+      "list_code_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "List security.",
+    "relevant_tools": [
+      "list_code_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Give me every security.",
+    "relevant_tools": [
+      "list_code_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Show all security.",
+    "relevant_tools": [
+      "list_code_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "What security exist?",
+    "relevant_tools": [
+      "list_code_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "List commits.",
+    "relevant_tools": [
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "Give me every commits.",
+    "relevant_tools": [
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "Show all commits.",
+    "relevant_tools": [
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "What commits exist?",
+    "relevant_tools": [
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "List commits for a GitHub repository.",
+    "relevant_tools": [
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "List copilot.",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "Show all copilot.",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "List GitHub Copilot Spaces accessible to the user.",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "What copilot exist?",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "Give me every copilot.",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "List Dependabot alerts.",
+    "relevant_tools": [
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Show all discussions.",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "List discussions.",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "List the discussion categories configured for a repository.",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "Give me every discussions.",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "What discussions exist?",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "List GitHub Discussions in a repository.",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "List gists.",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "Show all gists.",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "List Gists owned by a user.",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "Give me every gists.",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "What gists exist?",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "List security advisories published across GitHub, optionally filtered by ecosystem/severity.",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "What issues exist?",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "Show all issues.",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "List the custom fields available on issues in a repository or project.",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "List issues.",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "Give me every issues.",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "List the issue types configured for a repository or organization.",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "List issues in a GitHub repository.",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "List the labels defined on a repository.",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "What labels exist?",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "Give me every labels.",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "List labels.",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "Show all labels.",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "What notifications exist?",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "List notifications.",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "Give me every notifications.",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "List GitHub notifications for the authenticated user.",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "Show all notifications.",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "List security advisories across all repositories in an organization.",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Show all pull requests.",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "List pull requests in a GitHub repository.",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Give me every pull.",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "What pull requests exist?",
+    "relevant_tools": [
+      "list_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Show all releases.",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "What releases exist?",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "List releases.",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "Give me every releases.",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "List the published releases for a repository.",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "List the collaborators who have access to a repository.",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "List security advisories for a specific repository.",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "List secret scanning alerts.",
+    "relevant_tools": [
+      "list_secret_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "What repository stars exist?",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "List repository stars.",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "List repositories starred by a user.",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "Show all repository stars.",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "Give me every tags.",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "What tags exist?",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "List the Git tags in a repository.",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "List tags.",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "Show all tags.",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "Subscribe to or unsubscribe from notifications for a specific thread.",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Can you subscribe to or unsubscribe from notifications for a specific thread?",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Display notifications.",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Subscribe to or unsubscribe from notifications for an entire repository.",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Can you subscribe to or unsubscribe from notifications for an entire repository?",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Mark all GitHub notifications as read.",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "Can you mark all GitHub notifications as read?",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "Execute pull requests.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "Merge a pull request in a GitHub repository.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "Trigger pull requests.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "Kick off pull requests.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "Run pull requests.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "I need to see projects.",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "Look up projects for this repo.",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "Get details about a GitHub Projects board.",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "Display projects.",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "Can you get details about a GitHub Projects board?",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "Show me projects.",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "What is projects?",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "Check projects.",
+    "relevant_tools": [
+      "projects_get"
+    ]
+  },
+  {
+    "prompt": "List GitHub Projects boards for a user, repository, or organization.",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "Can you list GitHub Projects boards for a user, repository, or organization?",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "Write projects.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "Create or update a GitHub Projects board or its items.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "Submit projects.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "Post projects.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "Add projects.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "Check pull requests.",
+    "relevant_tools": [
+      "pull_request_read"
+    ]
+  },
+  {
+    "prompt": "What is pull requests?",
+    "relevant_tools": [
+      "pull_request_read"
+    ]
+  },
+  {
+    "prompt": "Submit, update, or dismiss a pull request review.",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "Write repository.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Post repository.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Push multiple files to a GitHub repository in a single commit.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Submit repository.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Request a GitHub Copilot automated code review on a pull request.",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "I need to see pull requests.",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "Can you request a GitHub Copilot automated code review on a pull request?",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "Look up pull requests for this repo.",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "Display pull requests.",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "Show me pull requests.",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "Scan content for potential secrets.",
+    "relevant_tools": [
+      "run_secret_scanning"
+    ]
+  },
+  {
+    "prompt": "Execute security.",
+    "relevant_tools": [
+      "run_secret_scanning"
+    ]
+  },
+  {
+    "prompt": "Run security.",
+    "relevant_tools": [
+      "run_secret_scanning"
+    ]
+  },
+  {
+    "prompt": "Kick off security.",
+    "relevant_tools": [
+      "run_secret_scanning"
+    ]
+  },
+  {
+    "prompt": "Trigger security.",
+    "relevant_tools": [
+      "run_secret_scanning"
+    ]
+  },
+  {
+    "prompt": "Search for code search.",
+    "relevant_tools": [
+      "search_code"
+    ]
+  },
+  {
+    "prompt": "Look for code search.",
+    "relevant_tools": [
+      "search_code"
+    ]
+  },
+  {
+    "prompt": "Search for commits across GitHub repositories.",
+    "relevant_tools": [
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Look for commits.",
+    "relevant_tools": [
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Search for commits.",
+    "relevant_tools": [
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Find commits.",
+    "relevant_tools": [
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Search for issues.",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Find issues.",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Search GitHub issues.",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Look for issues.",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Look for users and organizations.",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Search for users and organizations.",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Find users and organizations.",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Search GitHub organizations.",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Search for pull requests across GitHub repositories.",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Find pull requests.",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Look for pull requests.",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Search for pull requests.",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Search for GitHub repositories.",
+    "relevant_tools": [
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Look for repository.",
+    "relevant_tools": [
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Find repository.",
+    "relevant_tools": [
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Search for repository.",
+    "relevant_tools": [
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Search GitHub users.",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "Can you find issues that are semantically similar to a given issue or description, to detect duplicates?",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "Find issues that are semantically similar to a given issue or description, to detect duplicates.",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "Submit repository stars.",
+    "relevant_tools": [
+      "star_repository"
+    ]
+  },
+  {
+    "prompt": "Add repository stars.",
+    "relevant_tools": [
+      "star_repository"
+    ]
+  },
+  {
+    "prompt": "Write repository stars.",
+    "relevant_tools": [
+      "star_repository"
+    ]
+  },
+  {
+    "prompt": "Star a GitHub repository.",
+    "relevant_tools": [
+      "star_repository"
+    ]
+  },
+  {
+    "prompt": "Post repository stars.",
+    "relevant_tools": [
+      "star_repository"
+    ]
+  },
+  {
+    "prompt": "Create, update, or link a sub-issue to a parent issue.",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "Remove repository stars.",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Delete repository stars.",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Get rid of repository stars.",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Remove a star from a GitHub repository.",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Change gists.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Update the content or description of an existing Gist.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Edit gists.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Update gists.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Modify gists.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Update an existing pull request.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Modify pull requests.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Edit pull requests.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Change pull requests.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Update pull requests.",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Update a pull request's branch with the latest changes from its base branch.",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "Could you list GitHub Actions resources?",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "I'd like to list GitHub Actions resources.",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "Please list GitHub Actions resources.",
+    "relevant_tools": [
+      "actions_list"
+    ]
+  },
+  {
+    "prompt": "Could you add a review comment to a pending (not yet submitted) pull request review?",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "I'd like to add a review comment to a pending (not yet submitted) pull request review.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Please add a review comment to a pending (not yet submitted) pull request review.",
+    "relevant_tools": [
+      "add_comment_to_pending_review"
+    ]
+  },
+  {
+    "prompt": "Could you add a comment to a GitHub issue?",
+    "relevant_tools": [
+      "add_issue_comment"
+    ]
+  },
+  {
+    "prompt": "Could you reply to an existing comment on a pull request?",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "I'd like to reply to an existing comment on a pull request.",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "Please reply to an existing comment on a pull request.",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "Can you help me reply to an existing comment on a pull request?",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "I need you to reply to an existing comment on a pull request.",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "Would you reply to an existing comment on a pull request?",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "Go ahead and reply to an existing comment on a pull request.",
+    "relevant_tools": [
+      "add_reply_to_pull_request_comment"
+    ]
+  },
+  {
+    "prompt": "Could you create a new branch in a GitHub repository?",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "I'd like to create a new branch in a GitHub repository.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "Please create a new branch in a GitHub repository.",
+    "relevant_tools": [
+      "create_branch"
+    ]
+  },
+  {
+    "prompt": "Could you create a new GitHub Gist?",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "I'd like to create a new GitHub Gist.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "Please create a new GitHub Gist.",
+    "relevant_tools": [
+      "create_gist"
+    ]
+  },
+  {
+    "prompt": "Could you create or update a file in a GitHub repository?",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "I'd like to create or update a file in a GitHub repository.",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Please create or update a file in a GitHub repository.",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Can you help me create or update a file in a GitHub repository?",
+    "relevant_tools": [
+      "create_or_update_file"
+    ]
+  },
+  {
+    "prompt": "Could you create a new pull request in a GitHub repository?",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "I'd like to create a new pull request in a GitHub repository.",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "Please create a new pull request in a GitHub repository.",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "Can you help me create a new pull request in a GitHub repository?",
+    "relevant_tools": [
+      "create_pull_request"
+    ]
+  },
+  {
+    "prompt": "Could you create a new GitHub repository?",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "I'd like to create a new GitHub repository.",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "Please create a new GitHub repository.",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "Can you help me create a new GitHub repository?",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "I need you to create a new GitHub repository.",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "Would you create a new GitHub repository?",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "Go ahead and create a new GitHub repository.",
+    "relevant_tools": [
+      "create_repository"
+    ]
+  },
+  {
+    "prompt": "Could you delete a file from a GitHub repository?",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "I'd like to delete a file from a GitHub repository.",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Please delete a file from a GitHub repository.",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Can you help me delete a file from a GitHub repository?",
+    "relevant_tools": [
+      "delete_file"
+    ]
+  },
+  {
+    "prompt": "Could you post or update a comment on a GitHub Discussion?",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "I'd like to post or update a comment on a GitHub Discussion.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "Please post or update a comment on a GitHub Discussion.",
+    "relevant_tools": [
+      "discussion_comment_write"
+    ]
+  },
+  {
+    "prompt": "Could you mark a single GitHub notification as read or done?",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "I'd like to mark a single GitHub notification as read or done.",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "Please mark a single GitHub notification as read or done.",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "Can you help me mark a single GitHub notification as read or done?",
+    "relevant_tools": [
+      "dismiss_notification"
+    ]
+  },
+  {
+    "prompt": "Could you fork a GitHub repository?",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "I'd like to fork a GitHub repository.",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "Please fork a GitHub repository.",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "Can you help me fork a GitHub repository?",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "I need you to fork a GitHub repository.",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "Would you fork a GitHub repository?",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "Go ahead and fork a GitHub repository.",
+    "relevant_tools": [
+      "fork_repository"
+    ]
+  },
+  {
+    "prompt": "Could you get details about a specific code quality finding from static analysis?",
+    "relevant_tools": [
+      "get_code_quality_finding"
+    ]
+  },
+  {
+    "prompt": "Could you get details about a code scanning alert?",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "I'd like to get details about a code scanning alert.",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Please get details about a code scanning alert.",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Can you help me get details about a code scanning alert?",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "I need you to get details about a code scanning alert.",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Would you get details about a code scanning alert?",
+    "relevant_tools": [
+      "get_code_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Could you get details about a Dependabot alert?",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "I'd like to get details about a Dependabot alert.",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "Please get details about a Dependabot alert.",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "Can you help me get details about a Dependabot alert?",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "I need you to get details about a Dependabot alert.",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "Would you get details about a Dependabot alert?",
+    "relevant_tools": [
+      "get_dependabot_alert"
+    ]
+  },
+  {
+    "prompt": "Could you list the comments on a GitHub Discussion?",
+    "relevant_tools": [
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the comments on a GitHub Discussion.",
+    "relevant_tools": [
+      "get_discussion_comments"
+    ]
+  },
+  {
+    "prompt": "Could you get details about a GitHub-wide (global) security advisory?",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "I'd like to get details about a GitHub-wide (global) security advisory.",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "Please get details about a GitHub-wide (global) security advisory.",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "Can you help me get details about a GitHub-wide (global) security advisory?",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "I need you to get details about a GitHub-wide (global) security advisory.",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "Would you get details about a GitHub-wide (global) security advisory?",
+    "relevant_tools": [
+      "get_global_security_advisory"
+    ]
+  },
+  {
+    "prompt": "Could you get logs for GitHub Actions workflow jobs?",
+    "relevant_tools": [
+      "get_job_logs"
+    ]
+  },
+  {
+    "prompt": "I'd like to get logs for GitHub Actions workflow jobs.",
+    "relevant_tools": [
+      "get_job_logs"
+    ]
+  },
+  {
+    "prompt": "Please get logs for GitHub Actions workflow jobs.",
+    "relevant_tools": [
+      "get_job_logs"
+    ]
+  },
+  {
+    "prompt": "Can you help me get logs for GitHub Actions workflow jobs?",
+    "relevant_tools": [
+      "get_job_logs"
+    ]
+  },
+  {
+    "prompt": "Could you get details about a release identified by its tag name?",
+    "relevant_tools": [
+      "get_release_by_tag"
+    ]
+  },
+  {
+    "prompt": "Could you get the tree structure of a GitHub repository?",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "I'd like to get the tree structure of a GitHub repository.",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "Please get the tree structure of a GitHub repository.",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "Can you help me get the tree structure of a GitHub repository?",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "I need you to get the tree structure of a GitHub repository.",
+    "relevant_tools": [
+      "get_repository_tree"
+    ]
+  },
+  {
+    "prompt": "Could you get details about a specific secret scanning alert?",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "I'd like to get details about a specific secret scanning alert.",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Please get details about a specific secret scanning alert.",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Can you help me get details about a specific secret scanning alert?",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "I need you to get details about a specific secret scanning alert.",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Would you get details about a specific secret scanning alert?",
+    "relevant_tools": [
+      "get_secret_scanning_alert"
+    ]
+  },
+  {
+    "prompt": "Could you list the members of a GitHub team?",
+    "relevant_tools": [
+      "get_team_members"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the members of a GitHub team.",
+    "relevant_tools": [
+      "get_team_members"
+    ]
+  },
+  {
+    "prompt": "Please list the members of a GitHub team.",
+    "relevant_tools": [
+      "get_team_members"
+    ]
+  },
+  {
+    "prompt": "Can you help me list the members of a GitHub team?",
+    "relevant_tools": [
+      "get_team_members"
+    ]
+  },
+  {
+    "prompt": "Could you list the teams in a GitHub organization?",
+    "relevant_tools": [
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the teams in a GitHub organization.",
+    "relevant_tools": [
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "Please list the teams in a GitHub organization.",
+    "relevant_tools": [
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "Can you help me list the teams in a GitHub organization?",
+    "relevant_tools": [
+      "get_teams"
+    ]
+  },
+  {
+    "prompt": "Could you create or update a GitHub issue?",
+    "relevant_tools": [
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "I'd like to create or update a GitHub issue.",
+    "relevant_tools": [
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "Please create or update a GitHub issue.",
+    "relevant_tools": [
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "Can you help me create or update a GitHub issue?",
+    "relevant_tools": [
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "I need you to create or update a GitHub issue.",
+    "relevant_tools": [
+      "issue_write"
+    ]
+  },
+  {
+    "prompt": "Could you create or update a repository label (name, color, description)?",
+    "relevant_tools": [
+      "label_write"
+    ]
+  },
+  {
+    "prompt": "Could you list the branches in a GitHub repository?",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the branches in a GitHub repository.",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "Please list the branches in a GitHub repository.",
+    "relevant_tools": [
+      "list_branches"
+    ]
+  },
+  {
+    "prompt": "Could you list code scanning alerts?",
+    "relevant_tools": [
+      "list_code_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Could you list commits for a GitHub repository?",
+    "relevant_tools": [
+      "list_commits"
+    ]
+  },
+  {
+    "prompt": "Could you list GitHub Copilot Spaces accessible to the user?",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "I'd like to list GitHub Copilot Spaces accessible to the user.",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "Please list GitHub Copilot Spaces accessible to the user.",
+    "relevant_tools": [
+      "list_copilot_spaces"
+    ]
+  },
+  {
+    "prompt": "Could you list Dependabot alerts?",
+    "relevant_tools": [
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "I'd like to list Dependabot alerts.",
+    "relevant_tools": [
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Please list Dependabot alerts.",
+    "relevant_tools": [
+      "list_dependabot_alerts"
+    ]
+  },
+  {
+    "prompt": "Could you list the discussion categories configured for a repository?",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the discussion categories configured for a repository.",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "Please list the discussion categories configured for a repository.",
+    "relevant_tools": [
+      "list_discussion_categories"
+    ]
+  },
+  {
+    "prompt": "Could you list GitHub Discussions in a repository?",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "I'd like to list GitHub Discussions in a repository.",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "Please list GitHub Discussions in a repository.",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "Can you help me list GitHub Discussions in a repository?",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "I need you to list GitHub Discussions in a repository.",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "Would you list GitHub Discussions in a repository?",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "Go ahead and list GitHub Discussions in a repository.",
+    "relevant_tools": [
+      "list_discussions"
+    ]
+  },
+  {
+    "prompt": "Could you list Gists owned by a user?",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "I'd like to list Gists owned by a user.",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "Please list Gists owned by a user.",
+    "relevant_tools": [
+      "list_gists"
+    ]
+  },
+  {
+    "prompt": "Could you list security advisories published across GitHub, optionally filtered by ecosystem/severity?",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "I'd like to list security advisories published across GitHub, optionally filtered by ecosystem/severity.",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Please list security advisories published across GitHub, optionally filtered by ecosystem/severity.",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Can you help me list security advisories published across GitHub, optionally filtered by ecosystem/severity?",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "I need you to list security advisories published across GitHub, optionally filtered by ecosystem/severity.",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Would you list security advisories published across GitHub, optionally filtered by ecosystem/severity?",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Go ahead and list security advisories published across GitHub, optionally filtered by ecosystem/severity.",
+    "relevant_tools": [
+      "list_global_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Could you list the custom fields available on issues in a repository or project?",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the custom fields available on issues in a repository or project.",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "Please list the custom fields available on issues in a repository or project.",
+    "relevant_tools": [
+      "list_issue_fields"
+    ]
+  },
+  {
+    "prompt": "Could you list the issue types configured for a repository or organization?",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the issue types configured for a repository or organization.",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "Please list the issue types configured for a repository or organization.",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "Can you help me list the issue types configured for a repository or organization?",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "I need you to list the issue types configured for a repository or organization.",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "Would you list the issue types configured for a repository or organization?",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "Go ahead and list the issue types configured for a repository or organization.",
+    "relevant_tools": [
+      "list_issue_types"
+    ]
+  },
+  {
+    "prompt": "Could you list issues in a GitHub repository?",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "I'd like to list issues in a GitHub repository.",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "Please list issues in a GitHub repository.",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "Can you help me list issues in a GitHub repository?",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "I need you to list issues in a GitHub repository.",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "Would you list issues in a GitHub repository?",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "Go ahead and list issues in a GitHub repository.",
+    "relevant_tools": [
+      "list_issues"
+    ]
+  },
+  {
+    "prompt": "Could you list the labels defined on a repository?",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the labels defined on a repository.",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "Please list the labels defined on a repository.",
+    "relevant_tools": [
+      "list_label"
+    ]
+  },
+  {
+    "prompt": "Could you list GitHub notifications for the authenticated user?",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "I'd like to list GitHub notifications for the authenticated user.",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "Please list GitHub notifications for the authenticated user.",
+    "relevant_tools": [
+      "list_notifications"
+    ]
+  },
+  {
+    "prompt": "Could you list security advisories across all repositories in an organization?",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "I'd like to list security advisories across all repositories in an organization.",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Please list security advisories across all repositories in an organization.",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Can you help me list security advisories across all repositories in an organization?",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "I need you to list security advisories across all repositories in an organization.",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Would you list security advisories across all repositories in an organization?",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Go ahead and list security advisories across all repositories in an organization.",
+    "relevant_tools": [
+      "list_org_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Could you list the published releases for a repository?",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the published releases for a repository.",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "Please list the published releases for a repository.",
+    "relevant_tools": [
+      "list_releases"
+    ]
+  },
+  {
+    "prompt": "Could you list the collaborators who have access to a repository?",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the collaborators who have access to a repository.",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "Please list the collaborators who have access to a repository.",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "Can you help me list the collaborators who have access to a repository?",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "I need you to list the collaborators who have access to a repository.",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "Would you list the collaborators who have access to a repository?",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "Go ahead and list the collaborators who have access to a repository.",
+    "relevant_tools": [
+      "list_repository_collaborators"
+    ]
+  },
+  {
+    "prompt": "Could you list security advisories for a specific repository?",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "I'd like to list security advisories for a specific repository.",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Please list security advisories for a specific repository.",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Can you help me list security advisories for a specific repository?",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "I need you to list security advisories for a specific repository.",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Would you list security advisories for a specific repository?",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Go ahead and list security advisories for a specific repository.",
+    "relevant_tools": [
+      "list_repository_security_advisories"
+    ]
+  },
+  {
+    "prompt": "Could you list secret scanning alerts?",
+    "relevant_tools": [
+      "list_secret_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "I'd like to list secret scanning alerts.",
+    "relevant_tools": [
+      "list_secret_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Please list secret scanning alerts.",
+    "relevant_tools": [
+      "list_secret_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Can you help me list secret scanning alerts?",
+    "relevant_tools": [
+      "list_secret_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "I need you to list secret scanning alerts.",
+    "relevant_tools": [
+      "list_secret_scanning_alerts"
+    ]
+  },
+  {
+    "prompt": "Could you list repositories starred by a user?",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "I'd like to list repositories starred by a user.",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "Please list repositories starred by a user.",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "Can you help me list repositories starred by a user?",
+    "relevant_tools": [
+      "list_starred_repositories"
+    ]
+  },
+  {
+    "prompt": "Could you list the Git tags in a repository?",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "I'd like to list the Git tags in a repository.",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "Please list the Git tags in a repository.",
+    "relevant_tools": [
+      "list_tags"
+    ]
+  },
+  {
+    "prompt": "Could you subscribe to or unsubscribe from notifications for a specific thread?",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "I'd like to subscribe to or unsubscribe from notifications for a specific thread.",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Please subscribe to or unsubscribe from notifications for a specific thread.",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Can you help me subscribe to or unsubscribe from notifications for a specific thread?",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "I need you to subscribe to or unsubscribe from notifications for a specific thread.",
+    "relevant_tools": [
+      "manage_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Could you subscribe to or unsubscribe from notifications for an entire repository?",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "I'd like to subscribe to or unsubscribe from notifications for an entire repository.",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Please subscribe to or unsubscribe from notifications for an entire repository.",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Can you help me subscribe to or unsubscribe from notifications for an entire repository?",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "I need you to subscribe to or unsubscribe from notifications for an entire repository.",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Would you subscribe to or unsubscribe from notifications for an entire repository?",
+    "relevant_tools": [
+      "manage_repository_notification_subscription"
+    ]
+  },
+  {
+    "prompt": "Could you mark all GitHub notifications as read?",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "I'd like to mark all GitHub notifications as read.",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "Please mark all GitHub notifications as read.",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "Can you help me mark all GitHub notifications as read?",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "I need you to mark all GitHub notifications as read.",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "Would you mark all GitHub notifications as read?",
+    "relevant_tools": [
+      "mark_all_notifications_read"
+    ]
+  },
+  {
+    "prompt": "Could you merge a pull request in a GitHub repository?",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "I'd like to merge a pull request in a GitHub repository.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "Please merge a pull request in a GitHub repository.",
+    "relevant_tools": [
+      "merge_pull_request"
+    ]
+  },
+  {
+    "prompt": "Could you list GitHub Projects boards for a user, repository, or organization?",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "I'd like to list GitHub Projects boards for a user, repository, or organization.",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "Please list GitHub Projects boards for a user, repository, or organization.",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "Can you help me list GitHub Projects boards for a user, repository, or organization?",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "I need you to list GitHub Projects boards for a user, repository, or organization.",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "Would you list GitHub Projects boards for a user, repository, or organization?",
+    "relevant_tools": [
+      "projects_list"
+    ]
+  },
+  {
+    "prompt": "Could you create or update a GitHub Projects board or its items?",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "I'd like to create or update a GitHub Projects board or its items.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "Please create or update a GitHub Projects board or its items.",
+    "relevant_tools": [
+      "projects_write"
+    ]
+  },
+  {
+    "prompt": "Could you submit, update, or dismiss a pull request review?",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "I'd like to submit, update, or dismiss a pull request review.",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "Please submit, update, or dismiss a pull request review.",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "Can you help me submit, update, or dismiss a pull request review?",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "I need you to submit, update, or dismiss a pull request review.",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "Would you submit, update, or dismiss a pull request review?",
+    "relevant_tools": [
+      "pull_request_review_write"
+    ]
+  },
+  {
+    "prompt": "Could you push multiple files to a GitHub repository in a single commit?",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "I'd like to push multiple files to a GitHub repository in a single commit.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Please push multiple files to a GitHub repository in a single commit.",
+    "relevant_tools": [
+      "push_files"
+    ]
+  },
+  {
+    "prompt": "Could you request a GitHub Copilot automated code review on a pull request?",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "I'd like to request a GitHub Copilot automated code review on a pull request.",
+    "relevant_tools": [
+      "request_copilot_review"
+    ]
+  },
+  {
+    "prompt": "Could you scan content for potential secrets?",
+    "relevant_tools": [
+      "run_secret_scanning"
+    ]
+  },
+  {
+    "prompt": "Could you search for commits across GitHub repositories?",
+    "relevant_tools": [
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "I'd like to search for commits across GitHub repositories.",
+    "relevant_tools": [
+      "search_commits"
+    ]
+  },
+  {
+    "prompt": "Could you search GitHub issues?",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "I'd like to search GitHub issues.",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Please search GitHub issues.",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Can you help me search GitHub issues?",
+    "relevant_tools": [
+      "search_issues"
+    ]
+  },
+  {
+    "prompt": "Could you search GitHub organizations?",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "I'd like to search GitHub organizations.",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Please search GitHub organizations.",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Can you help me search GitHub organizations?",
+    "relevant_tools": [
+      "search_orgs"
+    ]
+  },
+  {
+    "prompt": "Could you search for pull requests across GitHub repositories?",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "I'd like to search for pull requests across GitHub repositories.",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Please search for pull requests across GitHub repositories.",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Can you help me search for pull requests across GitHub repositories?",
+    "relevant_tools": [
+      "search_pull_requests"
+    ]
+  },
+  {
+    "prompt": "Could you search for GitHub repositories?",
+    "relevant_tools": [
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "I'd like to search for GitHub repositories.",
+    "relevant_tools": [
+      "search_repositories"
+    ]
+  },
+  {
+    "prompt": "Could you search GitHub users?",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "I'd like to search GitHub users.",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "Please search GitHub users.",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "Can you help me search GitHub users?",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "I need you to search GitHub users.",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "Would you search GitHub users?",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "Go ahead and search GitHub users.",
+    "relevant_tools": [
+      "search_users"
+    ]
+  },
+  {
+    "prompt": "Could you find issues that are semantically similar to a given issue or description, to detect duplicates?",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "I'd like to find issues that are semantically similar to a given issue or description, to detect duplicates.",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "Please find issues that are semantically similar to a given issue or description, to detect duplicates.",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "Can you help me find issues that are semantically similar to a given issue or description, to detect duplicates?",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "I need you to find issues that are semantically similar to a given issue or description, to detect duplicates.",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "Would you find issues that are semantically similar to a given issue or description, to detect duplicates?",
+    "relevant_tools": [
+      "semantic_issue_similarity_search"
+    ]
+  },
+  {
+    "prompt": "Could you star a GitHub repository?",
+    "relevant_tools": [
+      "star_repository"
+    ]
+  },
+  {
+    "prompt": "Could you create, update, or link a sub-issue to a parent issue?",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "I'd like to create, update, or link a sub-issue to a parent issue.",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "Please create, update, or link a sub-issue to a parent issue.",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "Can you help me create, update, or link a sub-issue to a parent issue?",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "I need you to create, update, or link a sub-issue to a parent issue.",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "Would you create, update, or link a sub-issue to a parent issue?",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "Go ahead and create, update, or link a sub-issue to a parent issue.",
+    "relevant_tools": [
+      "sub_issue_write"
+    ]
+  },
+  {
+    "prompt": "Could you remove a star from a GitHub repository?",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "I'd like to remove a star from a GitHub repository.",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Please remove a star from a GitHub repository.",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Can you help me remove a star from a GitHub repository?",
+    "relevant_tools": [
+      "unstar_repository"
+    ]
+  },
+  {
+    "prompt": "Could you update the content or description of an existing Gist?",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "I'd like to update the content or description of an existing Gist.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Please update the content or description of an existing Gist.",
+    "relevant_tools": [
+      "update_gist"
+    ]
+  },
+  {
+    "prompt": "Could you update an existing pull request?",
+    "relevant_tools": [
+      "update_pull_request"
+    ]
+  },
+  {
+    "prompt": "Could you update a pull request's branch with the latest changes from its base branch?",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "I'd like to update a pull request's branch with the latest changes from its base branch.",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "Please update a pull request's branch with the latest changes from its base branch.",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "Can you help me update a pull request's branch with the latest changes from its base branch?",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "I need you to update a pull request's branch with the latest changes from its base branch.",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "Would you update a pull request's branch with the latest changes from its base branch?",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  },
+  {
+    "prompt": "Go ahead and update a pull request's branch with the latest changes from its base branch.",
+    "relevant_tools": [
+      "update_pull_request_branch"
+    ]
+  }
 ]
